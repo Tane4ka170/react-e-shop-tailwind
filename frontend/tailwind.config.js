@@ -6,7 +6,7 @@ export default {
       colors: {
         whiteText: "#fff",
         blackText: "#000",
-        lightText: "#f5f5f5",
+        lightText: "#7a7a7a",
         greenText: "#99c218",
         redText: "#f53823",
         skyText: "#2db2f2",
