@@ -61,11 +61,20 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="w-full bg-blackText text-whiteText">
         <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
           <p className="flex items-center gap-1">
             Select category <CiCircleChevDown />
           </p>
+          {bottomNavigation.map(({ title, link }) => (
+            <p
+              key={title}
+              className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group"
+            >
+              {title}
+              <span className="inline-flex w-full h-[1px] bg-whiteText absolute transform -translate-x-[105%] group-hover:translate-x-0 duration-300"></span>
+            </p>
+          ))}
         </Container>
       </div>
     </div>
