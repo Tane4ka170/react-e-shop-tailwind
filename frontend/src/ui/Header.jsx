@@ -1,7 +1,23 @@
 import { useState } from "react";
 import { logo } from "../assets";
-import { CiSearch, CiShoppingBasket, CiStar, CiUser } from "react-icons/ci";
+import {
+  CiCircleChevDown,
+  CiSearch,
+  CiShoppingBasket,
+  CiStar,
+  CiUser,
+} from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
+import Container from "./Container";
+
+const bottomNavigation = [
+  { title: "Home", link: "/" },
+  { title: "Shop", link: "/product" },
+  { title: "Cart", link: "/cart" },
+  { title: "Orders", link: "/orders" },
+  { title: "My Account", link: "/profile" },
+  { title: "Blog", link: "/blog" },
+];
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
@@ -44,6 +60,13 @@ const Header = () => {
             </span>
           </div>
         </div>
+      </div>
+      <div>
+        <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
+          <p className="flex items-center gap-1">
+            Select category <CiCircleChevDown />
+          </p>
+        </Container>
       </div>
     </div>
   );
