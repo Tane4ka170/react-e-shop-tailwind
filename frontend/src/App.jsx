@@ -5,11 +5,9 @@ import Header from "./ui/Header.jsx";
 const App = () => {
   return (
     <main>
-      <Header />
       <Container>
         <h1>Estimated</h1>
       </Container>
-      <Footer />
     </main>
   );
 };
