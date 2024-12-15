@@ -1,34 +1,37 @@
-import { HiMiniQueueList } from "react-icons/hi2";
 import { useLocation } from "react-router-dom";
 import Container from "../ui/Container";
 import LinkButton from "../ui/LinkButton";
-import { FaBookOpen, FaMicroblog } from "react-icons/fa";
-import { CiBookmark, CiCircleChevRight } from "react-icons/ci";
+import { FaClipboardList, FaPerson } from "react-icons/fa";
+import {
+  CiCircleChevRight,
+  CiShoppingCart,
+  CiShoppingTag,
+} from "react-icons/ci";
 
 const links = [
   {
     name: "Product",
     href: "/product",
-    description: "You will find all available products here.",
-    icon: FaBookOpen,
+    description: "Discover all our available products here.",
+    icon: CiShoppingTag,
   },
   {
     name: "Shop",
     href: "/shop",
-    description: "Maximum collections of shopping products.",
-    icon: HiMiniQueueList,
+    description: "Explore a wide variety of shopping collections.",
+    icon: CiShoppingCart,
   },
   {
     name: "My Account",
     href: "/profile",
-    description: "Find your information here.",
-    icon: CiBookmark,
+    description: "Manage your personal information and settings.",
+    icon: FaPerson,
   },
   {
-    name: "Blog",
-    href: "/blog",
-    description: "Read our latest news and articles on shopping.",
-    icon: FaMicroblog,
+    name: "Orders",
+    href: "/orders",
+    description: "Check your previous orders and their status.",
+    icon: FaClipboardList,
   },
 ];
 const NotFound = () => {
