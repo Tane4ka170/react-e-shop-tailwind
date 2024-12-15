@@ -4,25 +4,22 @@ import Container from "./Container";
 const FooterTop = () => {
   const incentives = [
     {
-      name: "Free shipping",
+      name: "24/7 Support",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg",
-      description:
-        "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
+        "https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/support_agent/default/48px.svg",
+      description: "We're always here to help, even at 3 AM.",
     },
     {
-      name: "10-year warranty",
+      name: "Sustainable Materials",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
-      description:
-        "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
+        "https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/eco/default/48px.svg",
+      description: "Our products are made with the planet in mind.",
     },
     {
-      name: "Exchanges",
+      name: "Customizable Options",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg",
-      description:
-        "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
+        "https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/build/default/48px.svg",
+      description: "Make it yours! Customize everything.",
     },
   ];
   return (
