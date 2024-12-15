@@ -9,6 +9,7 @@ import {
 } from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
 import Container from "./Container";
+import { Link } from "react-router-dom";
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
@@ -25,7 +26,9 @@ const Header = () => {
     <div className="w-full bg-whiteText">
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
         {/* Logo */}
-        <img src={logo} alt="logo" className="w-14 h-14" />
+        <Link to={"/"}>
+          <img src={logo} alt="logo" className="w-14 h-14" />
+        </Link>
         {/* Searchbar */}
         <div className="hidden md:inline-flex max-w-3xl w-full relative">
           <input
@@ -46,19 +49,23 @@ const Header = () => {
         </div>
         {/* Menubar */}
         <div className="flex items-center gap-x-6">
-          <CiUser className="hover:text-skyText duration-200 cursor-pointer" />
-          <div className="relative block">
+          <Link to={"/profile"}>
+            <CiUser className="hover:text-skyText duration-200 cursor-pointer" />
+          </Link>
+
+          <Link to={"/favorite"} className="relative block">
             <CiStar className="hover:text-skyText duration-200 cursor-pointer" />
+
             <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               0
             </span>
-          </div>
-          <div className="relative block">
+          </Link>
+          <Link to={"/cart"} className="relative block">
             <CiShoppingBasket className="hover:text-skyText duration-200 cursor-pointer" />
             <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               0
             </span>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="w-full bg-blackText text-whiteText">
@@ -67,13 +74,14 @@ const Header = () => {
             Select category <CiCircleChevDown />
           </p>
           {bottomNavigation.map(({ title, link }) => (
-            <p
+            <Link
+              to={link}
               key={title}
               className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group"
             >
               {title}
               <span className="inline-flex w-full h-[1px] bg-whiteText absolute transform -translate-x-[105%] group-hover:translate-x-0 duration-300"></span>
-            </p>
+            </Link>
           ))}
         </Container>
       </div>
