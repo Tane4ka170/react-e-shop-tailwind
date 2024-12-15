@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
@@ -10,6 +9,9 @@ import Profile from "./pages/Profile.jsx";
 import Cart from "./pages/Cart.jsx";
 import Favorite from "./pages/Favorite.jsx";
 import Orders from "./pages/Orders.jsx";
+import Success from "./pages/Success.jsx";
+import Cancel from "./pages/Cancel.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const RouterLayout = () => {
   return (
@@ -26,38 +28,52 @@ const router = createBrowserRouter({
     path: "/",
     element: <App />,
   },
-  children: {
-    path: "/product",
-    element: <Product />,
-  },
-  children: {
-    path: "/product/:id",
-    element: <Product />,
-  },
-  children: {
-    path: "/category",
-    element: <Category />,
-  },
-  children: {
-    path: "/category/:id",
-    element: <Category />,
-  },
-  children: {
-    path: "/profile",
-    element: <Profile />,
-  },
-  children: {
-    path: "/cart",
-    element: <Cart />,
-  },
-  children: {
-    path: "/favorite",
-    element: <Favorite />,
-  },
-  children: {
-    path: "/orders",
-    element: <Orders />,
-  },
+  children: [
+    {
+      path: "/product",
+      element: <Product />,
+    },
+    {
+      path: "/product/:id",
+      element: <Product />,
+    },
+    {
+      path: "/category",
+      element: <Category />,
+    },
+    {
+      path: "/category/:id",
+      element: <Category />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
+    },
+    {
+      path: "/cart",
+      element: <Cart />,
+    },
+    {
+      path: "/favorite",
+      element: <Favorite />,
+    },
+    {
+      path: "/orders",
+      element: <Orders />,
+    },
+    {
+      path: "/success",
+      element: <Success />,
+    },
+    {
+      path: "/cancel",
+      element: <Cancel />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ],
 });
 
 createRoot(document.getElementById("root")).render(
