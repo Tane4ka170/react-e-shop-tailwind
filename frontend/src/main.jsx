@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import Layout from "./ui/Layout.js";
+import Layout from "./ui/Layout.jsx";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Product from "./pages/Product.jsx";
 import Category from "./pages/Category.jsx";
@@ -21,60 +21,62 @@ const RouterLayout = () => {
   );
 };
 
-const router = createBrowserRouter({
-  path: "/",
-  element: <RouterLayout />,
-  children: {
+const router = createBrowserRouter([
+  {
     path: "/",
-    element: <App />,
+    element: <RouterLayout />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/product",
+        element: <Product />,
+      },
+      {
+        path: "/product/:id",
+        element: <Product />,
+      },
+      {
+        path: "/category",
+        element: <Category />,
+      },
+      {
+        path: "/category/:id",
+        element: <Category />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/favorite",
+        element: <Favorite />,
+      },
+      {
+        path: "/orders",
+        element: <Orders />,
+      },
+      {
+        path: "/success",
+        element: <Success />,
+      },
+      {
+        path: "/cancel",
+        element: <Cancel />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
   },
-  children: [
-    {
-      path: "/product",
-      element: <Product />,
-    },
-    {
-      path: "/product/:id",
-      element: <Product />,
-    },
-    {
-      path: "/category",
-      element: <Category />,
-    },
-    {
-      path: "/category/:id",
-      element: <Category />,
-    },
-    {
-      path: "/profile",
-      element: <Profile />,
-    },
-    {
-      path: "/cart",
-      element: <Cart />,
-    },
-    {
-      path: "/favorite",
-      element: <Favorite />,
-    },
-    {
-      path: "/orders",
-      element: <Orders />,
-    },
-    {
-      path: "/success",
-      element: <Success />,
-    },
-    {
-      path: "/cancel",
-      element: <Cancel />,
-    },
-    {
-      path: "*",
-      element: <NotFound />,
-    },
-  ],
-});
+]);
 
 createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
