@@ -52,9 +52,13 @@ const FooterTop = () => {
                 </div>
               </div>
 
-              <div className="mt-3 sm:ml-6">
-                <h3>{item?.name}</h3>
-                <p>{item?.description}</p>
+              <div className="mt-3 sm:ml-6 lg:ml-0">
+                <h3 className="text-base font-medium text-gray-900">
+                  {item?.name}
+                </h3>
+                <p className="mt-2 text-sm text-gray-500">
+                  {item?.description}
+                </p>
               </div>
             </div>
           ))}
