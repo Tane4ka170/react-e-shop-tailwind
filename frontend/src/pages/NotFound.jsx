@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Container from "../ui/Container";
 import LinkButton from "../ui/LinkButton";
-import { FaClipboardList, FaPerson } from "react-icons/fa";
+import { FaClipboardList, FaRegUser } from "react-icons/fa";
 import {
   CiCircleChevRight,
   CiShoppingCart,
@@ -25,7 +25,7 @@ const links = [
     name: "My Account",
     href: "/profile",
     description: "Manage your personal information and settings.",
-    icon: FaPerson,
+    icon: FaRegUser,
   },
   {
     name: "Orders",
