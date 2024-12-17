@@ -70,7 +70,7 @@ const Header = () => {
       </div>
       <div className="w-full bg-blackText text-whiteText">
         <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
-          <p className="flex items-center gap-1">
+          <p className="inline-flex items-center gap-2 rounded-md border border-gray-400 hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
             Select category <CiCircleChevDown />
           </p>
           {bottomNavigation.map(({ title, link }) => (
