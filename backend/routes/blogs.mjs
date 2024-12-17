@@ -6,3 +6,5 @@ const router = Router();
 router.get("/blogs", (req, res) => {
   res.send(blogsData);
 });
+
+export default router;
