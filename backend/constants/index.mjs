@@ -206,8 +206,9 @@ export const products = [
     _id: 3825,
     name: "Samsung QLED Smart TV 55",
     images: [
-      "https://images.samsung.com/is/image/samsung/p6pim/ua/qa55q60aauxua/gallery/ua-qled-q60a-qa55q60aauxua-431612-ua.jpg",
-      "https://images.samsung.com/is/image/samsung/p6pim/ua/qa55q60aauxua/gallery/ua-qled-q60a-qa55q60aauxua-431610-ua.jpg",
+      "https://images.samsung.com/is/image/samsung/p6pim/ua/qe55q70dauxua/gallery/ua-qled-q70d-qe55q70dauxua-540627036?$650_519_PNG$",
+      "https://images.samsung.com/is/image/samsung/p6pim/ua/qe55q60dauxua/gallery/ua-qled-q60d-qe55q60dauxua-541615873?$650_519_PNG$",
+      "https://touch.com.ua/upload/resize_cache/webp/resize_cache/iblock/ef0/500_500_1/0682qwl6pok2bzcgy09g1pqh6z3mgzfh.webp",
     ],
     description:
       "55-inch QLED Smart TV from Samsung with 4K resolution and HDR support.",
@@ -223,14 +224,14 @@ export const products = [
     overView:
       "Discover vibrant colors and sharp picture quality with the new Samsung QLED Smart TV.",
     isNew: true,
-    _base: "tvAndAudio",
+    _base: cat?.tvAndAudio,
   },
   {
     _id: 3826,
     name: "Apple iPhone 14 Pro",
     images: [
-      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-max-deep-purple-select?wid=940&hei=1112&fmt=png-alpha&.v=1660753619946",
-      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-deep-purple-select?wid=940&hei=1112&fmt=png-alpha&.v=1660753619932",
+      "https://gstore.ua/content/images/26/480x480l50nn0/apple-iphone-14-pro-128gb-silver-mq023-85982188264795.png",
+      "https://cdn.new-brz.net/app/public/models/MQ0T3PX-A/large/w/230421160014880361.webp",
     ],
     description:
       "The new iPhone 14 Pro with a 6.1-inch display, A16 Bionic chip, and a triple camera setup.",
@@ -245,14 +246,15 @@ export const products = [
     isStock: true,
     overView: "Experience power and elegance with the new iPhone 14 Pro.",
     isNew: true,
-    _base: "cellPhones",
+    _base: cat?.cellPhones,
   },
   {
     _id: 3827,
     name: "Dell XPS 13 Laptop",
     images: [
-      "https://i.dell.com/sites/csimages/Merchandizing_Imagery/all/xps-13-9310-laptop.jpg",
-      "https://i.dell.com/sites/csimages/Merchandizing_Imagery/all/xps-13-9310-laptop-close.jpg",
+      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/13-9340/media-gallery/gray/touch-oled/notebook-xps-13-9340-t-oled-gy-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=320&wid=541&qlt=100,1&resMode=sharp2&size=541,320&chrss=full",
+      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/9345/media-gallery/touch/gray/notebook-xps-13-9345-t-gray-gallery-2-1.png?fmt=png-alpha&pscan=auto&scl=1&hei=320&wid=436&qlt=100,1&resMode=sharp2&size=436,320&chrss=full",
+      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/notebook-xps-9315-nt-blue-gallery-3.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=575&qlt=100,1&resMode=sharp2&size=575,402&chrss=full",
     ],
     description:
       "Sleek Dell XPS 13 laptop with an Intel Core i7 processor, 16GB RAM, and 512GB SSD.",
@@ -267,14 +269,15 @@ export const products = [
     isStock: true,
     overView: "Power and portability in one device – the Dell XPS 13.",
     isNew: false,
-    _base: "computersAndLaptop",
+    _base: cat?.computersAndLaptop,
   },
   {
     _id: 3828,
     name: "Sony WH-1000XM4 Headphones",
     images: [
-      "https://www.sony.com/image/sony-wh-1000xm4-black.jpg",
-      "https://www.sony.com/image/sony-wh-1000xm4-silver.jpg",
+      "https://media.wired.com/photos/5f2b2e792f0075bf6e0a1de6/master/pass/Gear-Sony-WH-1000XM4-1-SOURCE-Sony.jpg",
+      "https://imageio.forbes.com/specials-images/imageserve/5f2c1f4101b4ac7f60809a60/Sony-WH-1000XM4-headphones--just-launched-/960x0.jpg?format=jpg&width=960",
+      "https://i.insider.com/5f36a9e4e89ebf001f044924?width=1200&format=jpeg",
     ],
     description:
       "Wireless headphones with active noise cancellation and premium sound quality.",
@@ -289,14 +292,15 @@ export const products = [
     isStock: true,
     overView: "Enjoy your music without interruptions with Sony WH-1000XM4.",
     isNew: false,
-    _base: "headphones",
+    _base: cat?.headphones,
   },
   {
     _id: 3829,
     name: "Fitbit Versa 3 Smartwatch",
     images: [
-      "https://static.fitbit.com/fitbit-versa-3.jpg",
-      "https://static.fitbit.com/fitbit-versa-3-front.jpg",
+      "https://cdn.27.ua/sc--media--prod/default/bf/40/67/bf406785-5a37-4b99-9ef7-b9ee2d69205c.jpg",
+      "https://a.allegroimg.com/s1080/117040/4cce1b874de595c735954680874c/Smartwatch-Fitbit-Versa-3-czarny-Material-paska-tworzywo-sztuczne",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc6rv3WoMY45tW9anyIaXz4-tqDeBsiAU5hg&s",
     ],
     description:
       "Smartwatch with built-in GPS, heart rate monitoring, and up to 6 days of battery life.",
@@ -311,14 +315,15 @@ export const products = [
     isStock: true,
     overView: "Stay active and connected with the Fitbit Versa 3.",
     isNew: true,
-    _base: "smartWatches",
+    _base: cat?.smartWatches,
   },
   {
     _id: 3830,
     name: "Samsung Galaxy Tab S8",
     images: [
-      "https://images.samsung.com/is/image/samsung/p6pim/ua/galaxy-tab-s8-256gb-wi-fi-12-4-01.jpg",
-      "https://images.samsung.com/is/image/samsung/p6pim/ua/galaxy-tab-s8-256gb-wi-fi-12-4-02.jpg",
+      "https://a.allegroimg.com/s1080/1199e7/91209e8c4681a482b20cc739f037/Samsung-Galaxy-Tab-S8-12-4-8-128GB-5G-Silver-Wbudowana-pamiec-128-GB",
+      "https://apolo.com.ua/image/cache/catalog/Apolo2019/4/352563564-samsung-galaxy-tab-s8-plus-12-4-8-128gb-5g-pink-gold-sm-x806bida-500x500.jpg",
+      "https://images.samsung.com/ua/galaxy-tab-s8/feature/buy/carousel/TabS8_S8+_allColorKV_WithSPen_MO.jpg",
     ],
     description:
       "12.4-inch Android tablet with 256GB storage and S Pen support.",
@@ -334,14 +339,15 @@ export const products = [
     overView:
       "Enjoy productivity and creativity on the go with Samsung Galaxy Tab S8.",
     isNew: true,
-    _base: "tablets",
+    _base: cat?.tablets,
   },
   {
     _id: 3831,
     name: "Bose QuietComfort 45 Headphones",
     images: [
-      "https://www.bose.com/content/dam/bose/consumer/web/black/qc45-headphones.jpg",
-      "https://www.bose.com/content/dam/bose/consumer/web/qc45-headphones-white.jpg",
+      "https://m.media-amazon.com/images/I/513SArZRYRL.jpg",
+      "https://era-in-ear.com/wp-content/uploads/2022/01/Bose-QuietComfort-45.jpg",
+      "https://i.moyo.ua/img/gallery/5022/54/1271476_middle.jpg",
     ],
     description:
       "Premium wireless headphones with active noise cancellation and unmatched comfort.",
@@ -356,14 +362,15 @@ export const products = [
     isStock: true,
     overView: "Experience supreme sound and comfort with Bose QuietComfort 45.",
     isNew: false,
-    _base: "headphones",
+    _base: cat?.headphones,
   },
   {
     _id: 3832,
     name: "HP Spectre x360 Laptop",
     images: [
-      "https://www.hp.com/us-en/shop/pdfs/spectre-x360-13.jpg",
-      "https://www.hp.com/us-en/shop/pdfs/spectre-x360-13-02.jpg",
+      "https://www.hp.com/ca-en/shop/Html/Merch/Images/9B0L2UA-ABL_2_1750x1285.jpg",
+      "https://www.hp.com/gb-en/shop/Html/Merch/Images/c08744066_1750x1285.jpg",
+      "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08799380.png?impolicy=Png_Res&imwidth=270&imdensity=1",
     ],
     description:
       "Convertible 13-inch laptop with Intel Core i7 processor, 16GB RAM, and 512GB SSD.",
@@ -378,14 +385,15 @@ export const products = [
     isStock: true,
     overView: "Work or play from anywhere with the versatile HP Spectre x360.",
     isNew: true,
-    _base: "computersAndLaptop",
+    _base: cat?.computersAndLaptop,
   },
   {
     _id: 3833,
     name: "Apple Watch Series 8",
     images: [
-      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/watch-series-8-front-graphite?wid=940&hei=1112&fmt=png-alpha&.v=1660731714374",
-      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/watch-series-8-front-silver?wid=940&hei=1112&fmt=png-alpha&.v=1660731714765",
+      "https://my-apple.com.ua/image/catalog/products/watch/series-8/product-red-1.png",
+      "https://pixel.com.ua/image/cache/catalog/applewatch/series8/applewatchseries841mm-4-800x800.jpg",
+      "https://mcstore.com.ua/news/wp-content/uploads/2022/08/Apple-Watch-Series-8-mc.jpg",
     ],
     description:
       "Smartwatch with advanced health and fitness features, including ECG and blood oxygen monitoring.",
@@ -400,14 +408,15 @@ export const products = [
     isStock: true,
     overView: "Stay healthy and connected with the Apple Watch Series 8.",
     isNew: true,
-    _base: "smartWatches",
+    _base: cat?.smartWatches,
   },
   {
     _id: 3834,
     name: "Sony PlayStation 5 Console",
     images: [
-      "https://www.sony.com/is/image/sony/ps5-console.jpg",
-      "https://www.sony.com/is/image/sony/ps5-console2.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQARF49bcbpxpXlyh643EeO6kd9ppR1flDLaw&s",
+      "https://images.prom.ua/5014216807_w640_h640_playstation-5-blue-ray.jpg",
+      "https://img.jabko.ua/image/cache//catalog/products/2024/09/110940/ps5-pro-3full.jpg.webp",
     ],
     description:
       "Next-gen gaming console with lightning-fast load times, immersive visuals, and exclusive games.",
@@ -422,14 +431,15 @@ export const products = [
     isStock: true,
     overView: "Experience gaming like never before with PlayStation 5.",
     isNew: true,
-    _base: "gameAndVideo",
+    _base: cat?.gameAndVideo,
   },
   {
     _id: 3835,
     name: "Xiaomi Mi 11 Ultra",
     images: [
-      "https://i01.appmifile.com/5599/2021/02/19/a13c48fe59d3ac960cbec52db0cb58e5.jpg",
-      "https://i01.appmifile.com/5519/2021/02/19/486d7848e7d3ac25d8db9222f3583832.jpg",
+      "https://wookie.com.ua/content/images/46/zashchitnyy-chekhol-unicase-rugged-guard-dlya-xiaomi-mi-11-ultra91795-36386306987696.jpg",
+      "https://ireland.apollo.olxcdn.com/v1/files/tm5kljthgfzv-UA/image",
+      "https://cdn.new-brz.net/app/public/models/MI11ULTRA-12-256CW/large/w/210621160009445136.webp",
     ],
     description:
       "Flagship smartphone with 6.81-inch AMOLED display, Snapdragon 888, and 108MP camera.",
@@ -445,14 +455,15 @@ export const products = [
     overView:
       "Take your smartphone experience to the next level with the Mi 11 Ultra.",
     isNew: true,
-    _base: "cellPhones",
+    _base: cat?.cellPhones,
   },
   {
     _id: 3836,
     name: "Sony WH-1000XM4",
     images: [
-      "https://www.sony.com/image/wh-1000xm4-p.jpg",
-      "https://www.sony.com/image/wh-1000xm4-p2.jpg",
+      "https://content1.rozetka.com.ua/goods/images/big/396467425.jpg",
+      "https://avic.com.ua/assets/cache/products/234548/naushniki-sony-wh-1000xm4-black-19-prod_xl.jpg",
+      "https://pcshop.ua/image/catalog/FotoOpis/Sony/WH-1000XM4%2023.jpg",
     ],
     description:
       "Industry-leading noise-canceling headphones with a 30-hour battery life.",
@@ -468,14 +479,15 @@ export const products = [
     overView:
       "Get premium sound quality and noise-canceling features with Sony WH-1000XM4.",
     isNew: true,
-    _base: "headphones",
+    _base: cat?.headphones,
   },
   {
     _id: 3837,
     name: "Lenovo ThinkPad X1 Carbon Gen 9",
     images: [
-      "https://www.lenovo.com/medias/lenovo-laptops-thinkpad-x1-carbon-gen-9-hero.png",
-      "https://www.lenovo.com/medias/lenovo-laptops-thinkpad-x1-carbon-gen-9-angle.png",
+      "https://p1-ofp.static.pub/fes/cms/2022/03/17/pw5jy11vn8u0jbi3rdu3aq1ij4bl15411237.png",
+      "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjMwMTQxfGltYWdlL2pwZWd8aDQ1L2gxYy8xMTMzMjY5MTAwMTM3NC5qcGd8YzI3NmFhYzdjN2I4Nzc0ZjFlYzM0MWZiZDQ4MWJiMmRlYTVlOTEzNWJiNzA3MjlmMTY4ZjdlODI2ODcwOGEwNw/bWFzdGVyfH.jpg",
+      "https://content2.rozetka.com.ua/goods/images/big/291232038.png",
     ],
     description:
       "Ultra-light and durable 14-inch laptop with Intel Core i7, 16GB RAM, and 512GB SSD.",
@@ -491,14 +503,15 @@ export const products = [
     overView:
       "The ultimate combination of performance and portability with Lenovo ThinkPad X1 Carbon.",
     isNew: true,
-    _base: "computersAndLaptop",
+    _base: cat?.computersAndLaptop,
   },
   {
     _id: 3838,
     name: "Apple iPad Pro 12.9-inch",
     images: [
-      "https://www.apple.com/v/ipad-pro/l/images/overview/hero/hero_endframe__b53d1b9b2182.jpg",
-      "https://www.apple.com/v/ipad-pro/l/images/overview/hero/ipad-pro-12-9-hero__fghjbg7eiywm.jpg",
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-ipad-pro-12-wifi-spacegray-2021?wid=1150&hei=1150&fmt=jpeg&qlt=95&.v=1674663706569",
+      "https://m.media-amazon.com/images/I/61ZYtF-byGL.jpg",
+      "https://i.pcmag.com/imagery/reviews/01TBSjO8pGQCS6wWsZ315FS-2..v1569469987.jpg",
     ],
     description:
       "Powerful tablet with a 12.9-inch Liquid Retina XDR display, M1 chip, and 5G support.",
@@ -514,14 +527,15 @@ export const products = [
     overView:
       "Maximize your creativity and productivity with the Apple iPad Pro.",
     isNew: true,
-    _base: "tablets",
+    _base: cat?.tablets,
   },
   {
     _id: 3839,
     name: "Sony Alpha 7C Camera",
     images: [
-      "https://www.sony.com/image/alpha-7c-camera.jpg",
-      "https://www.sony.com/image/alpha-7c-camera2.jpg",
+      "https://sony.scene7.com/is/image/sonyglobalsolutions/feature_04_mobile?$toutMobile$",
+      "https://m.media-amazon.com/images/I/71vnW8Hjc6L.jpg",
+      "https://m.media-amazon.com/images/I/71fzB04f1ML._AC_UF894,1000_QL80_.jpg",
     ],
     description:
       "Compact full-frame mirrorless camera with 24.2MP and 4K video recording.",
@@ -537,14 +551,15 @@ export const products = [
     overView:
       "Capture every moment with precision and clarity using Sony Alpha 7C.",
     isNew: true,
-    _base: "camerasAndPhotos",
+    _base: cat?.camerasAndPhotos,
   },
   {
     _id: 3840,
     name: "Samsung Galaxy S21 Ultra",
     images: [
-      "https://www.samsung.com/latin_en/smartphones/galaxy-s21-ultra-5g/_images/overview/hero-1.jpg",
-      "https://www.samsung.com/latin_en/smartphones/galaxy-s21-ultra-5g/_images/overview/hero-2.jpg",
+      "https://content2.rozetka.com.ua/goods/images/big/413538398.jpg",
+      "https://wefix.co.za/cdn/shop/products/Galaxy-S21-Ultra-Black.png?v=1700426091",
+      "https://www.ipeople.in.ua/files/products/2604054965.800x600w.jpg",
     ],
     description:
       "The most powerful Galaxy S, featuring a 108MP camera and 6.8-inch Dynamic AMOLED 2X display.",
@@ -560,14 +575,15 @@ export const products = [
     overView:
       "The Galaxy S21 Ultra offers ultimate performance with the best camera features.",
     isNew: true,
-    _base: "cellPhones",
+    _base: cat?.cellPhones,
   },
   {
     _id: 3841,
     name: "Bose QuietComfort 35 II",
     images: [
-      "https://www.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/headphones/qc35ii/qc35ii-mic-hero@2x.jpg",
-      "https://www.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/headphones/qc35ii/qc35ii-angle-hero@2x.jpg",
+      "https://hotline.ua/img/tx/240/2406954625.jpg",
+      "https://portativ.ua/media/cache/images/1/image/750x700/602f0fa2c1f0d1ba5e241f914e856ff9/catalog/product/b/b8900cd94e4954835762fd6ed0fca6c0.jpg",
+      "https://img.ktc.ua/img/base/1_295/1/181711.jpg",
     ],
     description:
       "Wireless noise-canceling headphones, with Alexa and Google Assistant built-in.",
@@ -583,14 +599,15 @@ export const products = [
     overView:
       "Bose QuietComfort 35 II provides unparalleled noise-canceling technology and sound quality.",
     isNew: true,
-    _base: "headphones",
+    _base: cat?.headphones,
   },
   {
     _id: 3842,
     name: "Apple MacBook Pro 13-inch",
     images: [
-      "https://www.apple.com/v/macbook-pro-13/l/images/overview/hero_1x.jpg",
-      "https://www.apple.com/v/macbook-pro-13/l/images/overview/hero_2x.jpg",
+      "https://bigmag.ua/image/cache/catalog/image/MacBook/2022/Apple-MacBook-Pro-13-Silver-2022-MNEP3/Product/Apple-MacBook-Pro-13-Silver-2022-MNEP3-1-2000x2000.png",
+      "https://bigmag.ua/image/cache/catalog/archive/data/1c-macbook/GGKJV/22-800x600-2000x2000.jpg",
+      "https://my-apple.com.ua/image/catalog/products/mac/macbook-pro/macbook-pro-13-2020/space-gray-1.png",
     ],
     description:
       "13-inch MacBook Pro with Apple M1 chip, Retina display, and up to 20 hours of battery life.",
@@ -606,14 +623,15 @@ export const products = [
     overView:
       "Powerful performance and long battery life with the new Apple M1 chip in the MacBook Pro.",
     isNew: true,
-    _base: "computersAndLaptop",
+    _base: cat?.computersAndLaptop,
   },
   {
     _id: 3843,
     name: "Microsoft Surface Pro 7",
     images: [
-      "https://www.microsoft.com/en-us/surface/pro7/media/surface-pro-7-hero.jpg",
-      "https://www.microsoft.com/en-us/surface/pro7/media/surface-pro-7-front.jpg",
+      "https://www.cnet.com/a/img/resize/a0bf6e138d8c0edf3ae0709e1a5fece3fcd11a3d/hub/2019/10/21/6cdfa05c-6e0a-4111-bb38-e1cf6072ba8a/19-surface-pro-7.jpg?auto=webp&fit=crop&height=900&width=1200",
+      "https://a.allegroimg.com/s1080/1e9313/3df93695403d9acbb43bf51b8096",
+      "https://edtechmagazine.com/k12/sites/edtechmagazine.com.k12/files/styles/cdw_hero/public/articles/%5Bcdw_tech_site%3Afield_site_shortname%5D/202012/ETQ420_Microsoft%20Surface%20Pro%207%20Powers%20Distance%20Learning_ProductReview_Hero.jpg?itok=TR1U8lFy",
     ],
     description:
       "2-in-1 laptop with a 12.3-inch touchscreen, Intel Core i5, and up to 10.5 hours of battery life.",
@@ -629,14 +647,15 @@ export const products = [
     overView:
       "The Microsoft Surface Pro 7 offers exceptional versatility with the power of a laptop and portability of a tablet.",
     isNew: true,
-    _base: "computersAndLaptop",
+    _base: cat?.computersAndLaptop,
   },
   {
     _id: 3844,
     name: "Canon EOS 90D",
     images: [
-      "https://www.usa.canon.com/internet/wcm/connect/us/153b207b-f6fb-4233-a35b-cfa0b237ebf2/canon-eos-90d-thumbnail.jpg",
-      "https://www.usa.canon.com/internet/wcm/connect/us/7a1b6c8a-beb4-4782-90d5-1d1b9f812d3a/canon-eos-90d-angle.jpg",
+      "https://i1.adis.ws/i/canon/eos-90d_fergus_kennedy_ambient_4030_c4ee8d74f45a4af2b6ef0bef3569630d?$hero-header-full-16by9-dt-jpg$",
+      "https://amateurphotographer.com/wp-content/uploads/sites/7/2019/10/4R2A7060-scaled.jpg?w=1024",
+      "https://3.img-dpreview.com/files/p/E~TS940x788~articles/5517326302/product/CanonEOS90D-beauty-02.jpeg",
     ],
     description:
       "The Canon EOS 90D is a DSLR camera that features a 32.5MP sensor, 4K video recording, and advanced autofocus.",
@@ -651,14 +670,15 @@ export const products = [
     isStock: true,
     overView: "Capture high-quality photos and videos with Canon EOS 90D.",
     isNew: true,
-    _base: "camerasAndPhotos",
+    _base: cat?.camerasAndPhotos,
   },
   {
     _id: 3845,
     name: "Sony WH-1000XM5",
     images: [
-      "https://www.sony.com/image/a0f8d9b3c6d7edb5ef41be81a3991212?fmt=pjpeg&wid=1500&hei=1500",
-      "https://www.sony.com/image/da2beabb5b84c54795b18f29b6b1b153?fmt=pjpeg&wid=1500&hei=1500",
+      "https://i.ytimg.com/vi/6CsJZxfZsL0/maxresdefault.jpg",
+      "https://i.moyo.ua/img/gallery/6139/9/2213001_zoom.jpg",
+      "https://www.sony.ua/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
     ],
     description:
       "Premium noise-canceling over-ear headphones with long-lasting comfort and 30 hours of battery life.",
@@ -674,14 +694,15 @@ export const products = [
     overView:
       "Industry-leading noise cancellation with exceptional sound quality for an immersive listening experience.",
     isNew: true,
-    _base: "headphones",
+    _base: cat?.headphones,
   },
   {
     _id: 3846,
     name: "Apple iPad Pro 12.9-inch",
     images: [
-      "https://www.apple.com/v/ipad-pro-12.9/a/images/overview/ipad-pro-hero-large.jpg",
-      "https://www.apple.com/v/ipad-pro-12.9/a/images/overview/ipad-pro-angle.jpg",
+      "https://grokholsky.com/uploads/products/590-590/66c887ca94feb-2024-08-23-03-59-54.webp",
+      "https://grokholsky.com/uploads/products/590-590/66c887ca94f8c-2024-08-23-03-59-54.webp",
+      "https://macplanet.ua/images/product/4703/gallery/16551/original.jpg?_=1339197207",
     ],
     description:
       "12.9-inch iPad Pro with M1 chip, Liquid Retina XDR display, and up to 2TB storage option.",
@@ -697,14 +718,15 @@ export const products = [
     overView:
       "The most powerful iPad ever, featuring an advanced M1 chip and stunning display technology.",
     isNew: true,
-    _base: "tablets",
+    _base: cat?.headphones,
   },
   {
     _id: 3847,
     name: "Microsoft Surface Laptop 4",
     images: [
-      "https://www.microsoft.com/en-us/surface/assets/images/surface-laptop-4/product/surface-laptop-4-color-options-hero.jpg",
-      "https://www.microsoft.com/en-us/surface/assets/images/surface-laptop-4/product/surface-laptop-4-angle.jpg",
+      "https://pcshop.ua/image/cache/webp/catalog/tovar/noutbuk-microsoft-surface-laptop-4-15-5w6-00001-bh-mi5w600001-platinum-photo2-1024x768.webp",
+      "https://notebook.lviv.ua/content/images/36/480x312l50nn0/95663345630981.jpg",
+      "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWBrzy?ver=85d4",
     ],
     description:
       "Laptop with 11th Gen Intel Core processor, 32GB RAM, and PixelSense touchscreen display.",
@@ -720,14 +742,15 @@ export const products = [
     overView:
       "Designed for both work and play, Surface Laptop 4 combines stunning performance with elegance.",
     isNew: true,
-    _base: "computersAndLaptop",
+    _base: cat?.computersAndLaptop,
   },
   {
     _id: 3848,
     name: "Nikon Z 6II",
     images: [
-      "https://cdn-01.kamera-express.nl/media/590x590/nikon-z6ii-2.jpg",
-      "https://cdn-01.kamera-express.nl/media/590x590/nikon-z6ii-1.jpg",
+      "https://www.adorama.com/images/cms/25025O9W-D23A_76795.jpeg",
+      "https://i.simpalsmedia.com/999.md/BoardImages/900x900/41ac762b458086a58e2915b662c8ceeb.jpg",
+      "https://photographylife.com/cdn-cgi/imagedelivery/GrQZt6ZFhE4jsKqjDEtqRA/photographylife.com/2021/05/Nikon-Z6-II-Mirrorless-Camera.jpg/w=2048,h=1365",
     ],
     description:
       "24.5 MP mirrorless camera with a full-frame sensor and high-speed autofocus system.",
@@ -743,14 +766,15 @@ export const products = [
     overView:
       "The Nikon Z 6II is built for professionals who need top-tier quality in both still photography and video.",
     isNew: true,
-    _base: "camerasAndPhotos",
+    _base: cat?.camerasAndPhotos,
   },
   {
     _id: 3849,
     name: "Samsung Galaxy Tab S7+",
     images: [
-      "https://www.samsung.com/global/galaxy/galaxy-tab-s7/images/galaxy-tab-s7-plus-features.jpg",
-      "https://www.samsung.com/global/galaxy/galaxy-tab-s7/images/galaxy-tab-s7-plus-side.jpg",
+      "https://applemir.com/files/products/galaxy_tab_s7plus_sm-t970_mysticblack.800x600w.jpg?78047f5ccc4d61eec754aa00ab770873",
+      "https://www.samsung-online.com.ua/uploads/shop/products/large/846dec5680b9c05ed4731a6e6451ec3c.jpg",
+      "https://fotomost.com.ua/content/images/33/536x536l50nn0/samsung-galaxy-tab-s7-plus-128gb-wi-fi-bronze-sm-t970nzna-80317172511108.jpg",
     ],
     description:
       "12.4-inch tablet with 120Hz Super AMOLED display and Qualcomm Snapdragon 865+.",
@@ -766,14 +790,15 @@ export const products = [
     overView:
       "The Galaxy Tab S7+ delivers incredible visuals with its large display and fast performance.",
     isNew: true,
-    _base: "tablets",
+    _base: cat?.tablets,
   },
   {
     _id: 3850,
     name: "Bose QuietComfort 35 II",
     images: [
-      "https://www.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/headphones/quietcomfort-35-ii/product_images/quietcomfort-35-ii-black-lifestyle-1200.jpg",
-      "https://www.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/headphones/quietcomfort-35-ii/product_images/quietcomfort-35-ii-silver-lifestyle-1200.jpg",
+      "https://i.ebayimg.com/thumbs/images/g/5-MAAOSwQJdnV-rF/s-l1200.jpg",
+      "https://m.novostar.ua/photo/233/big/328723_3.jpg",
+      "https://novostar.ua/photo/233/big/328724_1.jpg",
     ],
     description:
       "Wireless noise-canceling headphones with Alexa voice control and 20 hours of battery life.",
@@ -789,14 +814,15 @@ export const products = [
     overView:
       "The Bose QuietComfort 35 II provides world-class noise cancellation and premium sound quality.",
     isNew: true,
-    _base: "headphones",
+    _base: cat?.headphones,
   },
   {
     _id: 3851,
     name: "Apple MacBook Air M2",
     images: [
-      "https://www.apple.com/v/macbook-air/m/images/overview/macbook-air_hero_large.jpg",
-      "https://www.apple.com/v/macbook-air/m/images/overview/macbook-air_side_large.jpg",
+      "https://dzvinok.ua/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/a/p/apple_macbook_air_m2_a2682_mlxw3uaa_-foto2.webp",
+      "https://yabloki.ua/media/cache/sylius_shop_product_original/0b/1b/macbook-air-13-apple-m2-256gb-midnight-2022-mly33-1.png.webp",
+      "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Air-M2-availability-July-2022-macOS-Monterey_big.jpg.large.jpg",
     ],
     description:
       "13.6-inch MacBook Air with M2 chip, up to 512GB SSD, and 18 hours of battery life.",
@@ -812,14 +838,15 @@ export const products = [
     overView:
       "Light, powerful, and completely reimagined with the M2 chip for unbeatable performance and efficiency.",
     isNew: true,
-    _base: "computersAndLaptop",
+    _base: cat?.computersAndLaptop,
   },
   {
     _id: 3852,
     name: "Sony PlayStation 5",
     images: [
-      "https://www.playstation.com/en-us/support/images/ps5-console-1200x800.jpg",
-      "https://www.playstation.com/en-us/support/images/ps5-console-angle-1200x800.jpg",
+      "https://bigmag.ua/image/cache/catalog/image/Product/Sony%20Playstation%205/PS%205%20Slim/ps5555slim-2000x2000.jpg",
+      "https://super.com.ua/upload/iblock/7fe/7fefe78df0b4ecaae5145d02eadd645e.jpg",
+      "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
     ],
     description:
       "The next-generation gaming console with ultra-high-speed SSD and 4K gaming support.",
@@ -835,14 +862,15 @@ export const products = [
     overView:
       "PS5 delivers lightning-fast load times and immersive 4K graphics for a truly next-gen gaming experience.",
     isNew: true,
-    _base: "gameAndVideo",
+    _base: cat?.gameAndVideo,
   },
   {
     _id: 3853,
     name: "Canon EOS 5D Mark IV",
     images: [
-      "https://www.canon-europe.com/media/9157/canon-eos-5d-mark-iv-main.jpg?as=webp&d=800px&dpr=2",
-      "https://www.canon-europe.com/media/9158/canon-eos-5d-mark-iv-angle.jpg?as=webp&d=800px&dpr=2",
+      "https://2.img-dpreview.com/files/p/E~TS590x0~articles/9882546842/sambeauty/4.jpeg",
+      "https://d1rzxhvrtciqq1.cloudfront.net/uploads/images/listingimage/1007565/image/big-912610dd9fb73bfdd4e75c1aa8fa9ccd.jpg",
+      "https://i.ebayimg.com/thumbs/images/g/jToAAOSwatNnU-eN/s-l1200.jpg",
     ],
     description:
       "Full-frame DSLR camera with 30.4 MP resolution and 4K video capabilities.",
@@ -858,14 +886,15 @@ export const products = [
     overView:
       "The Canon EOS 5D Mark IV offers professional-level image quality and exceptional video performance.",
     isNew: false,
-    _base: "camerasAndPhotos",
+    _base: cat?.camerasAndPhotos,
   },
   {
     _id: 3854,
     name: "Samsung Galaxy Z Fold 5",
     images: [
-      "https://www.samsung.com/us/smartphones/galaxy-z-fold5/images/hero-image.png",
-      "https://www.samsung.com/us/smartphones/galaxy-z-fold5/images/folded-image.png",
+      "https://bsmedia.business-standard.com/_media/bs/img/article/2023-04/21/full/1682069872-5363.jpg?im=FeatureCrop,size=(826,465)",
+      "https://images.samsung.com/ua/smartphones/galaxy-fold5/images/galaxy-z-fold5-highlights-experience-dual-preview-tb.png?imbypass=true",
+      "https://images.samsung.com/ae/smartphones/galaxy-z-fold5/images/galaxy-z-fold5-highlights-kv-a.jpg?imbypass=true",
     ],
     description: "Foldable smartphone with 7.6-inch display and 12GB RAM.",
     regularPrice: 179999,
@@ -880,6 +909,6 @@ export const products = [
     overView:
       "The Galaxy Z Fold 5 brings a new level of foldable smartphone innovation with an ultra-clear display and multitasking capabilities.",
     isNew: true,
-    _base: "cellPhones",
+    _base: cat?.cellPhones,
   },
 ];
