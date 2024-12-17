@@ -14,35 +14,57 @@
     <style>
       body {
         font-family: "Aleo", serif;
-        background-color: #fafafa;
-        color: #333333;
+        background-color: #f4f7fa;
+        color: #2c3e50;
         margin: 0;
-        padding: 20px;
-        max-width: 900px;
-        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
       }
       h2 {
-        font-size: 24px;
-        color: #2e3b4e;
-        text-transform: capitalize;
-        font-weight: bold;
+        font-size: 28px;
+        color: #34495e;
+        font-weight: 700;
+        margin-bottom: 20px;
       }
       p {
-        font-size: 18px;
-        line-height: 1.5;
-      }
-      .routes p {
-        font-weight: 500;
-        margin-bottom: 14px;
-      }
-      a {
         font-size: 16px;
-        color: #2a56c6;
-        text-decoration: none;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
+        color: #7f8c8d;
       }
-      a:hover {
-        color: #d32f2f;
+      .routes {
+        margin: 20px 0;
+      }
+      .routes a {
+        display: block;
+        padding: 10px 15px;
+        margin: 10px 0;
+        background: #2e86de;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .routes a:hover {
+        background: #1e6091;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      }
+      footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #95a5a6;
       }
     </style>
   </head>
