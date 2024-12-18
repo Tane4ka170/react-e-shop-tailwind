@@ -9,8 +9,15 @@ import {
 } from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
 import Container from "./Container";
-import { data, Link } from "react-router-dom";
-export { config } from "../../config";
+import { Link } from "react-router-dom";
+import { config } from "../../config";
+import {
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  Transition,
+} from "@headlessui/react";
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
@@ -28,11 +35,19 @@ const Header = () => {
   useEffect(() => {
     const fetchData = async () => {
       const endpoint = `${config?.baseUrl}/categories`;
+      try {
+        const response = await fetch(endpoint);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setCategories(data);
+        console.log("data", data);
+      } catch (error) {
+        console.log("Error fetching data", error);
+      }
     };
-
-    return () => {
-      second;
-    };
+    fetchData();
   }, []);
 
   return (
@@ -83,9 +98,40 @@ const Header = () => {
       </div>
       <div className="w-full bg-blackText text-whiteText">
         <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
-          <p className="inline-flex items-center gap-2 rounded-md border border-gray-400 hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
-            Select category <CiCircleChevDown />
-          </p>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md border border-gray-400 hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+              Select Category <CiCircleChevDown className="text-base mt-1" />
+            </MenuButton>
+            <Transition
+              enter="transition ease-out duration-75"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="transition ease-in duration-100"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <MenuItems
+                anchor="bottom end"
+                className="w-52 origin-top-right rounded-xl border border-white/5 bg-black p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
+              >
+                {categories.map((item) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            </Transition>
+          </Menu>
           {bottomNavigation.map(({ title, link }) => (
             <Link
               to={link}
@@ -93,7 +139,7 @@ const Header = () => {
               className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group"
             >
               {title}
-              <span className="inline-flex w-full h-[1px] bg-whiteText absolute transform -translate-x-[105%] group-hover:translate-x-0 duration-300"></span>
+              <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300" />
             </Link>
           ))}
         </Container>
