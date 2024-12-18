@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { logo } from "../assets";
 import {
   CiCircleChevDown,
@@ -9,7 +9,8 @@ import {
 } from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
 import Container from "./Container";
-import { Link } from "react-router-dom";
+import { data, Link } from "react-router-dom";
+export { config } from "../../config";
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
@@ -22,6 +23,18 @@ const bottomNavigation = [
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/categories`;
+    };
+
+    return () => {
+      second;
+    };
+  }, []);
+
   return (
     <div className="w-full bg-whiteText">
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
