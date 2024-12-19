@@ -42,7 +42,6 @@ const Header = () => {
         }
         const data = await response.json();
         setCategories(data);
-        console.log("data", data);
       } catch (error) {
         console.log("Error fetching data", error);
       }
