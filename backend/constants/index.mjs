@@ -15,7 +15,7 @@ const cat = {
 export const categories = [
   {
     _id: 1,
-    name: "tvAndAudio",
+    name: "TV & Audio",
     image:
       "https://bestmarka.ru/wp-content/uploads/2021/01/televizory-samsung-2.jpg",
     description: "Televisions and audio equipment for home entertainment.",
@@ -23,7 +23,7 @@ export const categories = [
   },
   {
     _id: 2,
-    name: "tvBox",
+    name: "TV Box",
     image:
       "https://s13emagst.akamaized.net/products/15264/15263605/images/res_0721ff9bb75e2f4ed9d47a4c9a73bd2f.jpg",
     description:
@@ -32,21 +32,21 @@ export const categories = [
   },
   {
     _id: 3,
-    name: "powerTools",
+    name: "Power Tools",
     image: "https://img.moyo.ua/img/categories/4921/4921_1473863135_22.jpg",
     description: "Reliable power tools for home improvement and DIY projects.",
     _base: "powerTools",
   },
   {
     _id: 4,
-    name: "headphones",
+    name: "Headphones",
     image: "https://i.eldorado.ua/goods_images/1038998/6809007-1603720102.jpg",
     description: "High-quality headphones for music and gaming.",
     _base: "headphones",
   },
   {
     _id: 5,
-    name: "cellPhones",
+    name: "Cell Phones",
     image:
       "https://main-cdn.sbermegamarket.ru/big1/hlr-system/-10/764/849/999/913/25/100039500627b0.jpeg",
     description: "Modern smartphones with advanced features.",
@@ -54,14 +54,14 @@ export const categories = [
   },
   {
     _id: 6,
-    name: "smartWatches",
+    name: "Smart Watches",
     image: "https://img.ktc.ua/img/base/1/1/324461.jpg",
     description: "Smartwatches for fitness tracking and seamless connectivity.",
     _base: "smartWatches",
   },
   {
     _id: 7,
-    name: "gameAndVideo",
+    name: "Game & Video",
     image:
       "https://tse1.mm.bing.net/th?id=OIP.O4BbPtGhfOcmnEOvQ7pDygHaFj&pid=Api",
     description: "Gaming consoles and accessories for immersive video gaming.",
@@ -69,21 +69,21 @@ export const categories = [
   },
   {
     _id: 8,
-    name: "robotClean",
+    name: "Robot Clean",
     image: "https://files.foxtrot.com.ua/PhotoNew/img_0_32422_208_2.jpg",
     description: "Smart robot cleaners for effortless home cleaning.",
     _base: "robotClean",
   },
   {
     _id: 9,
-    name: "sportWatches",
+    name: "Sport Watches",
     image: "https://content.rozetka.com.ua/goods/images/big/45256191.jpg",
     description: "Durable sports watches for outdoor adventures.",
     _base: "sportWatches",
   },
   {
     _id: 10,
-    name: "tablets",
+    name: "Tablets",
     image:
       "https://main-cdn.sbermegamarket.ru/upload/reviews/images/14288b/ed-d3/f1-47/29-8f/40-4d/04235/3a9da/14288bed-d3f1-4729-8f40-4d042353a9da_0.jpg",
     description: "Portable tablets for work, play, and creativity.",
@@ -91,14 +91,14 @@ export const categories = [
   },
   {
     _id: 11,
-    name: "computersAndLaptop",
+    name: "Computers & Laptop",
     image: "https://img.moyo.ua/img/categories/3314/3314_1473862846_78.jpg",
     description: "Powerful computers and laptops for all your needs.",
     _base: "computersAndLaptop",
   },
   {
     _id: 12,
-    name: "camerasAndPhotos",
+    name: "Cameras & Photos",
     image: "https://content.rozetka.com.ua/goods/images/original/11963949.jpg",
     description: "Cameras and accessories for photography enthusiasts.",
     _base: "camerasAndPhotos",
