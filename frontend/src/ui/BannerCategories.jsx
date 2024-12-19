@@ -3,6 +3,8 @@ import { getData } from "../lib";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router";
 import { config } from "../../config";
+import CustomRightArrow from "./CustomRightArrow";
+import CustomLeftArrow from "./CustomLeftArrow";
 
 const responsive = {
   superLargeDesktop: {
@@ -50,10 +52,21 @@ const BannerCategories = () => {
       autoPlay={true}
       transitionDuration={1000}
       className="flex flex-row p-4 max-w-screen-xl mx-auto lg:px-0 relative"
+      customRightArrow={<CustomRightArrow />}
+      customLeftArrow={<CustomLeftArrow />}
     >
       {categories.map((item) => (
-        <Link to={`category/${item._base}`} key={item?._id}>
-          <img src={item?.image} alt="Category image" />
+        <Link
+          to={`category/${item._base}`}
+          key={item?._id}
+          className="flex items-center gap-x-2 p-1 border border-gray-100 flex-1 rounded-md hover:border-skyText hover:shadow-lg"
+        >
+          <img
+            src={item?.image}
+            alt="Category image"
+            className="w-10 h-10 rounded-full object-cover"
+          />
+          <p className="text-sm font-semibold">{item?.name}</p>
         </Link>
       ))}
     </Carousel>
