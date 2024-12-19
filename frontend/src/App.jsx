@@ -1,13 +1,11 @@
-import Container from "./ui/Container.jsx";
-import Footer from "./ui/Footer.jsx";
-import Header from "./ui/Header.jsx";
+import BannerCategories from "./ui/BannerCategories.jsx";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const App = () => {
   return (
     <main>
-      <Container>
-        <h1>Estimated</h1>
-      </Container>
+      <BannerCategories />
     </main>
   );
 };
