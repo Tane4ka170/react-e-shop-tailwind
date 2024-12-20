@@ -108,51 +108,50 @@ export const categories = [
 export const highlightsProducts = [
   {
     _id: 47,
-    name: "tvAndAudio",
+    name: "TV & Audio",
     title: "Experience Immersive Sound",
     buttonTitle: "Shop Now",
-    image:
-      "https://samoe.top/wp-content/uploads/2020/11/oled-lg-oled55c9p-54.6-scaled.jpeg",
+    image: "https://4k-online.com.ua/img/cms/teh/%D0%B2%D0%B0%D1%83.jpg",
     _base: "/product",
-    color: "#FF5733",
+    color: "#000",
   },
   {
     _id: 48,
-    name: "smartWatches",
+    name: "Smart Watches",
     title: "Stay Connected, Stay Fit",
     buttonTitle: "Discover More",
     image:
-      "https://content2.rozetka.com.ua/goods/images/original/268494143.jpg",
+      "https://www.colmi.info/cdn/shop/files/Smart_Watch_COLMi_M41_Appearance_Design_1.jpg?v=1681270037&width=3840",
     _base: "/products",
     color: "#28A745",
   },
   {
     _id: 49,
-    name: "camerasAndPhotos",
+    name: "Cameras And Photos",
     title: "Capture Every Moment",
     buttonTitle: "Explore Cameras",
     image:
-      "https://s13emagst.akamaized.net/products/54428/54427026/images/res_9c33ea66761bcc98009b3943012511b7.png",
+      "https://blog.arlo.com/wp-content/uploads/2023/10/46_Indoor_Cameras_Hero-scaled.webp",
     _base: "/product",
     color: "#FFC107",
   },
   {
     _id: 50,
-    name: "headphones",
+    name: "Headphones",
     title: "Unleash Your Music",
     buttonTitle: "View Headphones",
     image:
-      "https://tse3.mm.bing.net/th?id=OIP.Lrjr1V6HnddglHIC-T_p_QHaK0&pid=Api",
+      "https://media.wavescdn.com/images/products/hardware/hero/audeze-mobius-3d-headphones.png?fit=max",
     _base: "/product",
     color: "#6C63FF",
   },
   {
     _id: 51,
-    name: "cellPhones",
+    name: "Cell Phones",
     title: "Smartphones for Every Need",
     buttonTitle: "Buy Now",
     image:
-      "https://cdn.ksyru0-fusion.fds.api.mi-img.com/b2c-mishop-pms-ru/pms_1648782872.32459166.png",
+      "https://cdn.prod.website-files.com/6435124ea79f72c265f72807/673f05aa370e383fc4915c11_cash-isa-desktop.webp",
     _base: "/category/cellPhones",
     color: "#FF0000",
   },
