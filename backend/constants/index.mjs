@@ -17,7 +17,7 @@ export const categories = [
     _id: 1,
     name: "TV & Audio",
     image:
-      "https://bestmarka.ru/wp-content/uploads/2021/01/televizory-samsung-2.jpg",
+      "https://www.lg.com/us/images/TV/features/m_TV_Audio_Video_768x1080.jpg",
     description: "Televisions and audio equipment for home entertainment.",
     _base: "tvAndAudio",
   },
@@ -33,14 +33,16 @@ export const categories = [
   {
     _id: 3,
     name: "Power Tools",
-    image: "https://img.moyo.ua/img/categories/4921/4921_1473863135_22.jpg",
+    image:
+      "https://d32zxht0g2dn3w.cloudfront.net/s3fs-public/2024-09/f5d3d79c-83b7-40df-bc4a-025e9bda1f21.png",
     description: "Reliable power tools for home improvement and DIY projects.",
     _base: "powerTools",
   },
   {
     _id: 4,
     name: "Headphones",
-    image: "https://i.eldorado.ua/goods_images/1038998/6809007-1603720102.jpg",
+    image:
+      "https://spectrumjo.com/wp-content/uploads/2020/09/bose-700-wireless-noise-cancelling-headphones-3.png",
     description: "High-quality headphones for music and gaming.",
     _base: "headphones",
   },
@@ -48,7 +50,7 @@ export const categories = [
     _id: 5,
     name: "Cell Phones",
     image:
-      "https://main-cdn.sbermegamarket.ru/big1/hlr-system/-10/764/849/999/913/25/100039500627b0.jpeg",
+      "https://m.media-amazon.com/images/I/61LrzqsKW+S._AC_UF894,1000_QL80_.jpg",
     description: "Modern smartphones with advanced features.",
     _base: "cellPhones",
   },
@@ -63,7 +65,7 @@ export const categories = [
     _id: 7,
     name: "Game & Video",
     image:
-      "https://tse1.mm.bing.net/th?id=OIP.O4BbPtGhfOcmnEOvQ7pDygHaFj&pid=Api",
+      "https://image.made-in-china.com/226f3j00YQElGUHteLfp/K8-Game-Console-4K-Android-TV-Stick-Classic-40000-Games-64GB-HD-Retro-Video-IPTV.webp",
     description: "Gaming consoles and accessories for immersive video gaming.",
     _base: "gameAndVideo",
   },
@@ -85,14 +87,15 @@ export const categories = [
     _id: 10,
     name: "Tablets",
     image:
-      "https://main-cdn.sbermegamarket.ru/upload/reviews/images/14288b/ed-d3/f1-47/29-8f/40-4d/04235/3a9da/14288bed-d3f1-4729-8f40-4d042353a9da_0.jpg",
+      "https://m.media-amazon.com/images/I/71uDu5KlWuL._AC_UF1000,1000_QL80_.jpg",
     description: "Portable tablets for work, play, and creativity.",
     _base: "tablets",
   },
   {
     _id: 11,
     name: "Computers & Laptop",
-    image: "https://img.moyo.ua/img/categories/3314/3314_1473862846_78.jpg",
+    image:
+      "https://riazcomputer.com/wp-content/uploads/2024/08/acer-vero-i7.jpg",
     description: "Powerful computers and laptops for all your needs.",
     _base: "computersAndLaptop",
   },
