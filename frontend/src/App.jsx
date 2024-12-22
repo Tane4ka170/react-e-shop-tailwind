@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import HomeBanner from "./ui/HomeBanner.jsx";
 import Highlights from "./ui/Highlights.jsx";
 import Categories from "./ui/Categories.jsx";
+import ProductList from "./ui/ProductList.jsx";
 
 const App = () => {
   return (
@@ -12,6 +13,9 @@ const App = () => {
       <HomeBanner />
       <Highlights />
       <Categories />
+      <ProductList />
+      {/* <DiscountedBanner/> */}
+      {/* <Blog/> */}
     </main>
   );
 };
