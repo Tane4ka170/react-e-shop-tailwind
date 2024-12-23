@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { config } from "../../config";
+import ReactPaginate from "react-paginate";
+import ProductCard from "./ProductCard";
 
 const Items = ({ currentItems }) => {
   return (
