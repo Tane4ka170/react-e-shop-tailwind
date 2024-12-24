@@ -9,6 +9,8 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
+import FormattedPrice from "./FormattedPrice";
+import ProductCardSideNav from "./ProductCardSideNav";
 
 const ProductCard = ({ item, title }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +36,7 @@ const ProductCard = ({ item, title }) => {
           alt="productItem"
           className="w-full h-full rounded-md object-cover group-hover:scale-110"
         />
-        {/* Product cart side nav */}
+        <ProductCardSideNav />
       </div>
       <div className="flex flex-col gap-2 pb-2">
         <h3 className="text-xs uppercase font-semibold text-lightText">
@@ -71,27 +73,27 @@ const ProductCard = ({ item, title }) => {
                     as="h3"
                     className="text-base/7 font-medium text-whiteText"
                   >
-                    Hurry up!
+                    Special Offer Just for You!
                   </DialogTitle>
                   <p className="mt-2 text-sm/6 text-white/50">
-                    You are going to save{" "}
+                    Save an incredible{" "}
                     <span className="text-skyText">
-                      {/* <FormattedPrice
+                      <FormattedPrice
                         amount={item?.regularPrice - item?.discountedPrice}
-                      />{" "} */}
+                      />{" "}
                     </span>
-                    from this product.
+                    on this product. Don't miss this opportunity!
                   </p>
                   <p className="text-sm/6 text-white/50">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sequi, consequatur?
+                    Take advantage of this limited-time offer and enjoy premium
+                    quality at an unbeatable price.
                   </p>
                   <div className="mt-4">
                     <Button
                       className="inline-flex items-center gap-2 rounded-md bg-gray-700 py-1.5 px-3 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white"
                       onClick={close}
                     >
-                      Got it, thanks!
+                      Continue Shopping
                     </Button>
                   </div>
                 </DialogPanel>
