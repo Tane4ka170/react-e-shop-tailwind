@@ -6,6 +6,7 @@ import Highlights from "./ui/Highlights.jsx";
 import Categories from "./ui/Categories.jsx";
 import ProductList from "./ui/ProductList.jsx";
 import DiscountedBanner from "./ui/DiscountedBanner.jsx";
+import Blog from "./ui/Blog.jsx";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
       <Categories />
       <ProductList />
       <DiscountedBanner />
-      {/* <Blog/> */}
+      <Blog />
     </main>
   );
 };
