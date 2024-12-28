@@ -5,9 +5,10 @@ export const getData = async (endpoint) => {
       headers: { "Content-Type": "application/json" },
     });
     if (!response.ok) {
-      throw new Error("Data fetching error" + response?.statusText);
+      throw new Error("Data fetching error: " + response.statusText);
     }
-    const data = await responce.json();
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.log("Error while fetching", error);
     throw error;
