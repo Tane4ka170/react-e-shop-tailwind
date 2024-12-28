@@ -11,9 +11,12 @@ import {
 } from "@headlessui/react";
 import FormattedPrice from "./FormattedPrice";
 import ProductCardSideNav from "./ProductCardSideNav";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ item, title }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigation = useNavigate();
+
   const open = () => {
     setIsOpen(true);
   };
@@ -22,6 +25,10 @@ const ProductCard = ({ item, title }) => {
   };
   const percentage =
     ((item?.regularPrice - item?.discountedPrice) / item?.regularPrice) * 100;
+
+  const handleProduct = () => {
+    navigation(`/product/${item?._id}`);
+  };
   return (
     <div className="border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
       <div className="w-full h-60 relative p-2 group">
@@ -33,8 +40,9 @@ const ProductCard = ({ item, title }) => {
         </span>
         <img
           src={item?.images[0]}
-          alt="productItem"
+          alt="productImage"
           className="w-full h-full rounded-md object-cover group-hover:scale-110"
+          onClick={handleProduct}
         />
         <ProductCardSideNav />
       </div>
