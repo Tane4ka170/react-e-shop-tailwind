@@ -233,6 +233,9 @@ export const products = [
     images: [
       "https://gstore.ua/content/images/26/480x480l50nn0/apple-iphone-14-pro-128gb-silver-mq023-85982188264795.png",
       "https://cdn.new-brz.net/app/public/models/MQ0T3PX-A/large/w/230421160014880361.webp",
+      "https://cdn.new-brz.net/app/public/models/MQ0G3ZD-A/large/w/231212080100374155.webp",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy5dPkrUqXLSt3RgTs8l0LDr9jClVXktD1Cw&s",
+      "https://bigmag.ua/image/cache/catalog/new/kumunren/iPhone%2014/14-pro/Gold/41a8b5f47a5e74d091a7085693e095da-2000x2000.jpeg",
     ],
     description:
       "The new iPhone 14 Pro with a 6.1-inch display, A16 Bionic chip, and a triple camera setup.",
