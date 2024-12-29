@@ -211,6 +211,8 @@ export const products = [
       "https://images.samsung.com/is/image/samsung/p6pim/ua/qe55q70dauxua/gallery/ua-qled-q70d-qe55q70dauxua-540627036?$650_519_PNG$",
       "https://images.samsung.com/is/image/samsung/p6pim/ua/qe55q60dauxua/gallery/ua-qled-q60d-qe55q60dauxua-541615873?$650_519_PNG$",
       "https://touch.com.ua/upload/resize_cache/webp/resize_cache/iblock/ef0/500_500_1/0682qwl6pok2bzcgy09g1pqh6z3mgzfh.webp",
+      "https://img.ktc.ua/img/base/1/3/423173.jpg",
+      "https://images.samsung.com/is/image/samsung/p6pim/ua/qe55q80dauxua/gallery/ua-qled-q80d-qe55q80dauxua-540632160",
     ],
     description:
       "55-inch QLED Smart TV from Samsung with 4K resolution and HDR support.",
@@ -259,6 +261,8 @@ export const products = [
       "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/13-9340/media-gallery/gray/touch-oled/notebook-xps-13-9340-t-oled-gy-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=320&wid=541&qlt=100,1&resMode=sharp2&size=541,320&chrss=full",
       "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/9345/media-gallery/touch/gray/notebook-xps-13-9345-t-gray-gallery-2-1.png?fmt=png-alpha&pscan=auto&scl=1&hei=320&wid=436&qlt=100,1&resMode=sharp2&size=436,320&chrss=full",
       "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/notebook-xps-9315-nt-blue-gallery-3.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=575&qlt=100,1&resMode=sharp2&size=575,402&chrss=full",
+      "https://brain.com.ua/static/images/prod_img/6/4/U0247764_3big.jpg",
+      "https://www.cnet.com/a/img/resize/981cf8bfee44f8d71d98c7207b1f58be44d9e0aa/hub/2022/10/11/28f6b83c-0e42-4603-ae6f-78da24661635/dell-xps-13-2022-a.jpg?auto=webp&fit=crop&height=900&width=1200",
     ],
     description:
       "Sleek Dell XPS 13 laptop with an Intel Core i7 processor, 16GB RAM, and 512GB SSD.",
@@ -282,6 +286,8 @@ export const products = [
       "https://media.wired.com/photos/5f2b2e792f0075bf6e0a1de6/master/pass/Gear-Sony-WH-1000XM4-1-SOURCE-Sony.jpg",
       "https://imageio.forbes.com/specials-images/imageserve/5f2c1f4101b4ac7f60809a60/Sony-WH-1000XM4-headphones--just-launched-/960x0.jpg?format=jpg&width=960",
       "https://i.insider.com/5f36a9e4e89ebf001f044924?width=1200&format=jpeg",
+      "https://cdn.arstechnica.net/wp-content/uploads/2020/09/sony-wh-1000xm4.jpg",
+      "https://applefun.com.ua/source/2.1960x%20(10).jpg?1717054485848",
     ],
     description:
       "Wireless headphones with active noise cancellation and premium sound quality.",
@@ -305,6 +311,8 @@ export const products = [
       "https://cdn.27.ua/sc--media--prod/default/bf/40/67/bf406785-5a37-4b99-9ef7-b9ee2d69205c.jpg",
       "https://a.allegroimg.com/s1080/117040/4cce1b874de595c735954680874c/Smartwatch-Fitbit-Versa-3-czarny-Material-paska-tworzywo-sztuczne",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc6rv3WoMY45tW9anyIaXz4-tqDeBsiAU5hg&s",
+      "https://media.gq-magazine.co.uk/photos/5f91750283301c23f142ecb4/16:9/w_1280,c_limit/FITBITSNEW_HPimage.jpg",
+      "https://hotline.ua/img/tx/381/3810057275.jpg",
     ],
     description:
       "Smartwatch with built-in GPS, heart rate monitoring, and up to 6 days of battery life.",
@@ -328,6 +336,8 @@ export const products = [
       "https://a.allegroimg.com/s1080/1199e7/91209e8c4681a482b20cc739f037/Samsung-Galaxy-Tab-S8-12-4-8-128GB-5G-Silver-Wbudowana-pamiec-128-GB",
       "https://apolo.com.ua/image/cache/catalog/Apolo2019/4/352563564-samsung-galaxy-tab-s8-plus-12-4-8-128gb-5g-pink-gold-sm-x806bida-500x500.jpg",
       "https://images.samsung.com/ua/galaxy-tab-s8/feature/buy/carousel/TabS8_S8+_allColorKV_WithSPen_MO.jpg",
+      "https://strannikmodz.me/uploads/posts/2022-01/1642243049_samsung_galaxy_tab_s8_ultra_.jpeg",
+      "https://pcshop.ua/image/cache/webp/catalog/tovar/planshet-samsung-galaxy-tab-s8-8-128gb-wi-fi-pink-gold-sm-x700nida-photo3-1024x768.webp",
     ],
     description:
       "12.4-inch Android tablet with 256GB storage and S Pen support.",
@@ -351,6 +361,8 @@ export const products = [
       "https://m.media-amazon.com/images/I/513SArZRYRL.jpg",
       "https://era-in-ear.com/wp-content/uploads/2022/01/Bose-QuietComfort-45.jpg",
       "https://i.moyo.ua/img/gallery/5022/54/1271476_middle.jpg",
+      "https://assets.bose.com/content/dam/cloudassets/Bose_DAM/Web/consumer_electronics/global/products/headphones/qc45/product_silo_images/QC45_PDP_Ecom-Gallery-W05.jpg/jcr:content/renditions/cq5dam.web.1920.1920.jpeg",
+      "https://m.media-amazon.com/images/I/51dfFTwXqqL._AC_UF894,1000_QL80_.jpg",
     ],
     description:
       "Premium wireless headphones with active noise cancellation and unmatched comfort.",
@@ -374,6 +386,8 @@ export const products = [
       "https://www.hp.com/ca-en/shop/Html/Merch/Images/9B0L2UA-ABL_2_1750x1285.jpg",
       "https://www.hp.com/gb-en/shop/Html/Merch/Images/c08744066_1750x1285.jpg",
       "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08799380.png?impolicy=Png_Res&imwidth=270&imdensity=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAfPqdUWZnXGkjOPoQ2EoW4MTSKYjawiKI5w&s",
+      "https://c.428.ua/img/2107292/3000/2000/noutbuk_hp_spectre_x360_13-ap0009ur_5ml73ea~1659~1047.jpg",
     ],
     description:
       "Convertible 13-inch laptop with Intel Core i7 processor, 16GB RAM, and 512GB SSD.",
@@ -397,6 +411,8 @@ export const products = [
       "https://my-apple.com.ua/image/catalog/products/watch/series-8/product-red-1.png",
       "https://pixel.com.ua/image/cache/catalog/applewatch/series8/applewatchseries841mm-4-800x800.jpg",
       "https://mcstore.com.ua/news/wp-content/uploads/2022/08/Apple-Watch-Series-8-mc.jpg",
+      "https://bigmag.ua/image/cache/catalog/image/Product/AppleWatch_by/Apple%20Watch%20Series%208%20GPS%2045mm%20Midnight%20Aluminum%20Case%20w%20Midnight%20Sport%20Band%20MNP13/3978457185%20(1)-2000x2000.jpg",
+      "https://g-store.com.ua/image/cache/catalog/allprodst/34646-1200x1200.jpg",
     ],
     description:
       "Smartwatch with advanced health and fitness features, including ECG and blood oxygen monitoring.",
@@ -420,6 +436,8 @@ export const products = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQARF49bcbpxpXlyh643EeO6kd9ppR1flDLaw&s",
       "https://images.prom.ua/5014216807_w640_h640_playstation-5-blue-ray.jpg",
       "https://img.jabko.ua/image/cache//catalog/products/2024/09/110940/ps5-pro-3full.jpg.webp",
+      "https://cdn.newtime.ua/upload/2024-09/statsionarna-ihrova-prystavka-sony-playstation-5-pro-2tb-0.webp",
+      "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F92b4df4d-ed38-423a-933d-f9e5dc6ef190_1280x720.jpeg",
     ],
     description:
       "Next-gen gaming console with lightning-fast load times, immersive visuals, and exclusive games.",
@@ -443,6 +461,8 @@ export const products = [
       "https://wookie.com.ua/content/images/46/zashchitnyy-chekhol-unicase-rugged-guard-dlya-xiaomi-mi-11-ultra91795-36386306987696.jpg",
       "https://ireland.apollo.olxcdn.com/v1/files/tm5kljthgfzv-UA/image",
       "https://cdn.new-brz.net/app/public/models/MI11ULTRA-12-256CW/large/w/210621160009445136.webp",
+      "https://static1.xdaimages.com/wordpress/wp-content/uploads/2021/03/Xiaomi-Mi-11-Ultra.jpg",
+      "https://images.moneycontrol.com/static-mcnews/2021/05/Xiaomi-Mi-11-Ultra-.jpg",
     ],
     description:
       "Flagship smartphone with 6.81-inch AMOLED display, Snapdragon 888, and 108MP camera.",
@@ -466,6 +486,8 @@ export const products = [
       "https://content1.rozetka.com.ua/goods/images/big/396467425.jpg",
       "https://avic.com.ua/assets/cache/products/234548/naushniki-sony-wh-1000xm4-black-19-prod_xl.jpg",
       "https://pcshop.ua/image/catalog/FotoOpis/Sony/WH-1000XM4%2023.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYWIqPr8pwa-qdR36gB2xIvdwUpjfJhKT_IQ&s",
+      "https://broadcast.net.ua/images/2021/07/29/IMG_20210625_145719.jpg",
     ],
     description:
       "Industry-leading noise-canceling headphones with a 30-hour battery life.",
@@ -489,6 +511,8 @@ export const products = [
       "https://p1-ofp.static.pub/fes/cms/2022/03/17/pw5jy11vn8u0jbi3rdu3aq1ij4bl15411237.png",
       "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MjMwMTQxfGltYWdlL2pwZWd8aDQ1L2gxYy8xMTMzMjY5MTAwMTM3NC5qcGd8YzI3NmFhYzdjN2I4Nzc0ZjFlYzM0MWZiZDQ4MWJiMmRlYTVlOTEzNWJiNzA3MjlmMTY4ZjdlODI2ODcwOGEwNw/bWFzdGVyfH.jpg",
       "https://content2.rozetka.com.ua/goods/images/big/291232038.png",
+      "https://m.media-amazon.com/images/I/61HC-VUXoRL.jpg",
+      "https://i.ebayimg.com/images/g/S04AAOSwzfxkVsbo/s-l1200.jpg",
     ],
     description:
       "Ultra-light and durable 14-inch laptop with Intel Core i7, 16GB RAM, and 512GB SSD.",
@@ -512,6 +536,8 @@ export const products = [
       "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-ipad-pro-12-wifi-spacegray-2021?wid=1150&hei=1150&fmt=jpeg&qlt=95&.v=1674663706569",
       "https://m.media-amazon.com/images/I/61ZYtF-byGL.jpg",
       "https://i.pcmag.com/imagery/reviews/01TBSjO8pGQCS6wWsZ315FS-2..v1569469987.jpg",
+      "https://lite-mobile.ru/image/cache/catalog/import_files/63/63e396c20c3111e99b8ca40a0280a9e0_63e396c30c3111e99b8ca40a0280a9e0-1200x1200.jpg",
+      "https://cdn.new-brz.net/app/public/models/MXAT2HC-A/large/w/200404140011394402.webp",
     ],
     description:
       "Powerful tablet with a 12.9-inch Liquid Retina XDR display, M1 chip, and 5G support.",
@@ -535,6 +561,8 @@ export const products = [
       "https://sony.scene7.com/is/image/sonyglobalsolutions/feature_04_mobile?$toutMobile$",
       "https://m.media-amazon.com/images/I/71vnW8Hjc6L.jpg",
       "https://m.media-amazon.com/images/I/71fzB04f1ML._AC_UF894,1000_QL80_.jpg",
+      "https://fotomost.com.ua/content/images/6/1500x1500l80mc0/sony-alpha-a7c-body-black-28801212250548.jpg",
+      "https://goprokat.ua/image/cache/catalog/product/4/637cfbe39639d_1297013_main-1000x1000.jpg",
     ],
     description:
       "Compact full-frame mirrorless camera with 24.2MP and 4K video recording.",
@@ -558,6 +586,8 @@ export const products = [
       "https://content2.rozetka.com.ua/goods/images/big/413538398.jpg",
       "https://wefix.co.za/cdn/shop/products/Galaxy-S21-Ultra-Black.png?v=1700426091",
       "https://www.ipeople.in.ua/files/products/2604054965.800x600w.jpg",
+      "https://img.global.news.samsung.com/ua/wp-content/uploads/2021/01/Galaxy-S21_ultra_lifestyle_black_spen.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Xeu10xYsoJWEoAHvT2OjgqFqpe1DzvjJqw&s",
     ],
     description:
       "The most powerful Galaxy S, featuring a 108MP camera and 6.8-inch Dynamic AMOLED 2X display.",
@@ -581,6 +611,8 @@ export const products = [
       "https://hotline.ua/img/tx/240/2406954625.jpg",
       "https://portativ.ua/media/cache/images/1/image/750x700/602f0fa2c1f0d1ba5e241f914e856ff9/catalog/product/b/b8900cd94e4954835762fd6ed0fca6c0.jpg",
       "https://img.ktc.ua/img/base/1_295/1/181711.jpg",
+      "https://i.moyo.ua/img/products/4722/55_1500.jpg",
+      "https://bose-sound.ru/assets/images/bose-quietcomfort-35-ii/black/cq5dam.web_.1920.1920_002.png",
     ],
     description:
       "Wireless noise-canceling headphones, with Alexa and Google Assistant built-in.",
@@ -604,6 +636,8 @@ export const products = [
       "https://bigmag.ua/image/cache/catalog/image/MacBook/2022/Apple-MacBook-Pro-13-Silver-2022-MNEP3/Product/Apple-MacBook-Pro-13-Silver-2022-MNEP3-1-2000x2000.png",
       "https://bigmag.ua/image/cache/catalog/archive/data/1c-macbook/GGKJV/22-800x600-2000x2000.jpg",
       "https://my-apple.com.ua/image/catalog/products/mac/macbook-pro/macbook-pro-13-2020/space-gray-1.png",
+      "https://fopi.ua/images/Y2F0YWxvZy9Qcm9kdWN0L0FwcGxlINGC0LXRhdC90ZbQutCwL01hYy9NYWNCb29rIFByby9NYWNCb29rIFBybyAxMyBNMi9TcGFjZSBHcmF5L21icC1zcGFjZWdyYXktc2VsZWN0LTIwMjIwNi5qcGVnOjEwMDA6MTAwMA.webp",
+      "https://icentr.te.ua/wp-content/uploads/2024/07/photo_2024-07-29-16.02.27.jpeg",
     ],
     description:
       "13-inch MacBook Pro with Apple M1 chip, Retina display, and up to 20 hours of battery life.",
@@ -627,6 +661,8 @@ export const products = [
       "https://www.cnet.com/a/img/resize/a0bf6e138d8c0edf3ae0709e1a5fece3fcd11a3d/hub/2019/10/21/6cdfa05c-6e0a-4111-bb38-e1cf6072ba8a/19-surface-pro-7.jpg?auto=webp&fit=crop&height=900&width=1200",
       "https://a.allegroimg.com/s1080/1e9313/3df93695403d9acbb43bf51b8096",
       "https://edtechmagazine.com/k12/sites/edtechmagazine.com.k12/files/styles/cdw_hero/public/articles/%5Bcdw_tech_site%3Afield_site_shortname%5D/202012/ETQ420_Microsoft%20Surface%20Pro%207%20Powers%20Distance%20Learning_ProductReview_Hero.jpg?itok=TR1U8lFy",
+      "https://i.blogs.es/ae267b/surfacepro7ap/1366_2000.jpg",
+      "https://www.stuff.tv/wp-content/uploads/sites/2/2020/01/pro-7-i.jpg?w=1080",
     ],
     description:
       "2-in-1 laptop with a 12.3-inch touchscreen, Intel Core i5, and up to 10.5 hours of battery life.",
@@ -650,6 +686,8 @@ export const products = [
       "https://i1.adis.ws/i/canon/eos-90d_fergus_kennedy_ambient_4030_c4ee8d74f45a4af2b6ef0bef3569630d?$hero-header-full-16by9-dt-jpg$",
       "https://amateurphotographer.com/wp-content/uploads/sites/7/2019/10/4R2A7060-scaled.jpg?w=1024",
       "https://3.img-dpreview.com/files/p/E~TS940x788~articles/5517326302/product/CanonEOS90D-beauty-02.jpeg",
+      "https://i.ytimg.com/vi/jG4Ol8TeFhY/maxresdefault.jpg",
+      "https://ireland.apollo.olxcdn.com/v1/files/6k0e0bl8ql5o-UA/image;s=4404x3099",
     ],
     description:
       "The Canon EOS 90D is a DSLR camera that features a 32.5MP sensor, 4K video recording, and advanced autofocus.",
@@ -673,6 +711,8 @@ export const products = [
       "https://i.ytimg.com/vi/6CsJZxfZsL0/maxresdefault.jpg",
       "https://i.moyo.ua/img/gallery/6139/9/2213001_zoom.jpg",
       "https://www.sony.ua/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
+      "https://fdn.gsmarena.com/imgroot/news/22/10/wh-1000xm5-review/inline/-1200w5/gsmarena_001.jpg",
+      "https://www.sony.ua/image/94101fcc4f07476f823d060b0a188f23?fmt=png-alpha&wid=1200",
     ],
     description:
       "Premium noise-canceling over-ear headphones with long-lasting comfort and 30 hours of battery life.",
@@ -696,6 +736,8 @@ export const products = [
       "https://grokholsky.com/uploads/products/590-590/66c887ca94feb-2024-08-23-03-59-54.webp",
       "https://grokholsky.com/uploads/products/590-590/66c887ca94f8c-2024-08-23-03-59-54.webp",
       "https://macplanet.ua/images/product/4703/gallery/16551/original.jpg?_=1339197207",
+      "https://img.jabko.ua/image/cache/catalog/products/2024/07/171525/ipadpro4-(1)-1397x1397.jpeg.webp",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-unselect-gallery-1-202405_FMT_WHH?wid=1280&hei=720&fmt=p-jpg&qlt=80&.v=YXpaUEtKWGhlNnNrVGZkTEo4T0xsN2dzSmpObkZCM3MrNmJ5SkhESlNDaUNOeTJ0NG53OUFoWllqZzhOc3p1UzN0bWR6ME9RYmIrVG9PSXZFalM2aHdBb0pjWml6bllCL0Y5a1RKc2gxZjlIaERUT3FJbHFiWTlmb2lodm1tWE5BYzJOWEFVWXIzMVgzRTh3OWFLOTN3&traceId=1",
     ],
     description:
       "12.9-inch iPad Pro with M1 chip, Liquid Retina XDR display, and up to 2TB storage option.",
@@ -719,6 +761,8 @@ export const products = [
       "https://pcshop.ua/image/cache/webp/catalog/tovar/noutbuk-microsoft-surface-laptop-4-15-5w6-00001-bh-mi5w600001-platinum-photo2-1024x768.webp",
       "https://notebook.lviv.ua/content/images/36/480x312l50nn0/95663345630981.jpg",
       "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWBrzy?ver=85d4",
+      "https://compbest.com.ua/content/images/42/16841004157830_small11.jpg",
+      "https://pcshop.ua/image/cache/webp/catalog/tovar/noutbuk-microsoft-surface-laptop-4-135-5bt-00058-sandstone-photo3-1024x768.webp",
     ],
     description:
       "Laptop with 11th Gen Intel Core processor, 32GB RAM, and PixelSense touchscreen display.",
@@ -742,6 +786,8 @@ export const products = [
       "https://www.adorama.com/images/cms/25025O9W-D23A_76795.jpeg",
       "https://i.simpalsmedia.com/999.md/BoardImages/900x900/41ac762b458086a58e2915b662c8ceeb.jpg",
       "https://photographylife.com/cdn-cgi/imagedelivery/GrQZt6ZFhE4jsKqjDEtqRA/photographylife.com/2021/05/Nikon-Z6-II-Mirrorless-Camera.jpg/w=2048,h=1365",
+      "https://goprokat.ua/image/cache/catalog/product/4/6458cf1f91273_600704e2b4726_z6ii_24-70_4_front-1000x1000.jpg",
+      "https://i.moyo.ua/img/gallery/4805/71/1033765_middle.jpg",
     ],
     description:
       "24.5 MP mirrorless camera with a full-frame sensor and high-speed autofocus system.",
@@ -765,6 +811,8 @@ export const products = [
       "https://applemir.com/files/products/galaxy_tab_s7plus_sm-t970_mysticblack.800x600w.jpg?78047f5ccc4d61eec754aa00ab770873",
       "https://www.samsung-online.com.ua/uploads/shop/products/large/846dec5680b9c05ed4731a6e6451ec3c.jpg",
       "https://fotomost.com.ua/content/images/33/536x536l50nn0/samsung-galaxy-tab-s7-plus-128gb-wi-fi-bronze-sm-t970nzna-80317172511108.jpg",
+      "https://cdn.comfy.ua/media/x/img/1645882/21.png",
+      "https://www.samsung-online.com.ua/uploads/shop/products/large/5288af1f7cc6b2adbc6cd9f77d6d699b.jpg",
     ],
     description:
       "12.4-inch tablet with 120Hz Super AMOLED display and Qualcomm Snapdragon 865+.",
@@ -788,6 +836,8 @@ export const products = [
       "https://i.ebayimg.com/thumbs/images/g/5-MAAOSwQJdnV-rF/s-l1200.jpg",
       "https://m.novostar.ua/photo/233/big/328723_3.jpg",
       "https://novostar.ua/photo/233/big/328724_1.jpg",
+      "https://i.ebayimg.com/thumbs/images/g/hAgAAOSwzbxnY2E7/s-l1200.jpg",
+      "https://euroshops.com.ua/img/product/fb/fbb850ae889a2a9ec89269418b983f4e/original-95-5.jpg",
     ],
     description:
       "Wireless noise-canceling headphones with Alexa voice control and 20 hours of battery life.",
@@ -811,6 +861,8 @@ export const products = [
       "https://dzvinok.ua/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/a/p/apple_macbook_air_m2_a2682_mlxw3uaa_-foto2.webp",
       "https://yabloki.ua/media/cache/sylius_shop_product_original/0b/1b/macbook-air-13-apple-m2-256gb-midnight-2022-mly33-1.png.webp",
       "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Air-M2-availability-July-2022-macOS-Monterey_big.jpg.large.jpg",
+      "https://www.apple.com/newsroom/videos/macbook-air-camera/posters/Apple-WWDC22-MacBook-Air-camera-demo-220606.jpg.large_2x.jpg",
+      "https://bigmag.ua/image/cache/catalog/new/kumunren/MacBook_Air_2022/silver/52lkyboyvbec_2-2000x2000.jpeg",
     ],
     description:
       "13.6-inch MacBook Air with M2 chip, up to 512GB SSD, and 18 hours of battery life.",
@@ -834,6 +886,8 @@ export const products = [
       "https://bigmag.ua/image/cache/catalog/image/Product/Sony%20Playstation%205/PS%205%20Slim/ps5555slim-2000x2000.jpg",
       "https://super.com.ua/upload/iblock/7fe/7fefe78df0b4ecaae5145d02eadd645e.jpg",
       "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
+      "https://img.mta.ua/image/cache/data/foto/z216/21671/photos/Sony-PlayStation-5-Pro-2TB-89-White-04-600x600.jpg",
+      "https://fopi.ua/images/Y2F0YWxvZy9CbG9nL1BsYXlTdGF0aW9uIDUgUHJvINCd0L7QstC40Lkg0YDRltCy0LXQvdGMINGW0LPRgNC-0LLQuNGFINC80L7QttC70LjQstC-0YHRgtC10LkvMTgyLnBuZzoxMjAwOjgxMA.webp",
     ],
     description:
       "The next-generation gaming console with ultra-high-speed SSD and 4K gaming support.",
@@ -857,6 +911,8 @@ export const products = [
       "https://2.img-dpreview.com/files/p/E~TS590x0~articles/9882546842/sambeauty/4.jpeg",
       "https://d1rzxhvrtciqq1.cloudfront.net/uploads/images/listingimage/1007565/image/big-912610dd9fb73bfdd4e75c1aa8fa9ccd.jpg",
       "https://i.ebayimg.com/thumbs/images/g/jToAAOSwatNnU-eN/s-l1200.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJP4LT7EF4kHWiIL5xVIIOzH5T0iQGcNLEiQ&s",
+      "https://brain.com.ua/static/images/prod_img/0/2/U0210502_big_1731593639.jpg",
     ],
     description:
       "Full-frame DSLR camera with 30.4 MP resolution and 4K video capabilities.",
@@ -880,6 +936,8 @@ export const products = [
       "https://bsmedia.business-standard.com/_media/bs/img/article/2023-04/21/full/1682069872-5363.jpg?im=FeatureCrop,size=(826,465)",
       "https://images.samsung.com/ua/smartphones/galaxy-fold5/images/galaxy-z-fold5-highlights-experience-dual-preview-tb.png?imbypass=true",
       "https://images.samsung.com/ae/smartphones/galaxy-z-fold5/images/galaxy-z-fold5-highlights-kv-a.jpg?imbypass=true",
+      "https://cdn.new-brz.net/app/public/models/SM-F946BZKNSEK/large/w/240221110057921831.webp",
+      "https://cdn.new-brz.net/app/public/models/SM-F946BZKNSEK/large/w/240221110057785844.webp",
     ],
     description: "Foldable smartphone with 7.6-inch display and 12GB RAM.",
     regularPrice: 179999,
