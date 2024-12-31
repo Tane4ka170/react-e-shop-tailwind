@@ -11,6 +11,8 @@ import PriceTag from "../ui/PriceTag";
 import FormattedPrice from "../ui/FormattedPrice";
 import AddToCartBtn from "../ui/AddToCartBtn";
 import ProductCard from "../ui/ProductCard";
+import { productPayment } from "../assets/index";
+import CategoryFilters from "../ui/CategoryFilters";
 
 const Product = () => {
   const [productsData, setProductsData] = useState(null);
@@ -29,11 +31,11 @@ const Product = () => {
         setLoading(true);
         const data = await getData(endpoint);
         if (id) {
-          setProductsData(data);
+          setProductsData(data || {});
           setAllProducts([]);
         } else {
-          setProductsData(data);
-          setAllProducts(null);
+          setProductsData(null);
+          setAllProducts(data || []);
         }
       } catch (error) {
         console.error("Failed to retrieve data", error);
@@ -46,8 +48,8 @@ const Product = () => {
 
   useEffect(() => {
     if (productsData) {
-      setImgUrl(productsData?.images[0]);
-      setColor(productsData?.colors[0]);
+      setImgUrl(productsData?.images?.[0] || "");
+      setColor(productsData?.colors?.[0] || "");
     }
   }, [productsData]);
 
@@ -61,136 +63,73 @@ const Product = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="flex flex-start">
                 <div>
-                  {productsData?.images?.map((item, index) => (
-                    <img
-                      src={item}
-                      alt="img"
-                      key={index}
-                      className={`w-24 cursor-pointer opacity-80 hover:opacity-100 duration-300 ${
-                        imgUrl === item &&
-                        "border border-gray-500 rounded-sm opacity-100"
-                      }`}
-                      onClick={() => setImgUrl(item)}
-                    />
-                  ))}
+                  {productsData?.images?.length > 0 ? (
+                    productsData.images.map((item, index) => (
+                      <img
+                        src={item}
+                        alt={`img-${index}`}
+                        key={index}
+                        className={`w-24 cursor-pointer opacity-80 hover:opacity-100 duration-300 ${
+                          imgUrl === item &&
+                          "border border-gray-500 rounded-sm opacity-100"
+                        }`}
+                        onClick={() => setImgUrl(item)}
+                      />
+                    ))
+                  ) : (
+                    <p>No images available</p>
+                  )}
                 </div>
                 <div>
-                  <img src={imgUrl} alt="mainImage" />
+                  <img src={imgUrl || "/placeholder.png"} alt="mainImage" />
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <h2 className="text-3xl font-bold">{productsData?.name}</h2>
+                <h2 className="text-3xl font-bold">
+                  {productsData?.name || "Product Name"}
+                </h2>
                 <div className="flex items-center justify-between">
                   <PriceTag
-                    regularPrice={productsData?.regularPrice}
-                    discountedPrice={productsData?.discountedPrice}
+                    regularPrice={productsData?.regularPrice || 0}
+                    discountedPrice={productsData?.discountedPrice || 0}
                     className="text-xl"
                   />
                   <div className="flex items-center gap-1">
                     <div className="text-base text-lightText flex items-center">
-                      <CiStar />
-                      <CiStar />
-                      <CiStar />
-                      <CiStar />
-                      <CiStar />
+                      {Array(5)
+                        .fill(null)
+                        .map((_, index) => (
+                          <CiStar key={index} />
+                        ))}
                     </div>
-                    <p className="text-base font-semibold">{`(${productsData?.reviews} reviews)`}</p>
+                    <p className="text-base font-semibold">{`(${
+                      productsData?.reviews || 0
+                    } reviews)`}</p>
                   </div>
                 </div>
-                <p className="flex items-center">
-                  <FaEye className="mr-1" />{" "}
-                  <span className="font-semibold mr-1">
-                    {productsData?.reviews}
-                  </span>{" "}
-                  people are looking at this right now
-                </p>
-                <p>
-                  You are saving{" "}
-                  <span className="text-base font-semibold text-green-500">
-                    <FormattedPrice
-                      amount={
-                        productsData?.regularPrice -
-                        productsData?.discountedPrice
-                      }
-                    />
-                  </span>{" "}
-                  upon purchase
-                </p>
-                <div>
-                  {color && (
-                    <p>
-                      Color:{" "}
-                      <span
-                        className="font-semibold capitalize"
-                        style={{ color: color }}
-                      >
-                        {color}
-                      </span>
-                    </p>
-                  )}
-                  <div className="flex items-center gap-x-3">
-                    {productsData?.colors.map((item) => (
-                      <div
-                        key={item}
-                        className={`${
-                          item === color
-                            ? "border border-black p-1 rounded-full"
-                            : "border-transparent"
-                        }`}
-                      >
-                        <div
-                          className="w-10 h-10 rounded-full cursor-pointer"
-                          style={{ backgroundColor: item }}
-                          onClick={() => setColor(item)}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  {color && (
-                    <button
-                      onClick={() => setColor("")}
-                      className="font-semibold mt-1 flex items-center gap-1 hover:text-red-600 duration-200"
-                    >
-                      <FaRegWindowClose /> Clear
-                    </button>
-                  )}
-                </div>
-                <p>
-                  Brand:{" "}
-                  <span className="font-medium">{productsData?.brand}</span>
-                </p>
-                <p>
-                  Category:{" "}
-                  <span className="font-medium">{productsData?.category}</span>
-                </p>
+                {/* Other Product Details */}
                 <AddToCartBtn
                   product={productsData}
                   title="Buy now"
                   className="bg-black/80 py-3 text-base text-gray-200 hover:scale-100 hover:text-white duration-200"
                 />
-                <div className="bg-[#f7f7f7] p-5 rounded-md flex flex-col items-center justify-center gap-2">
-                  {/* <img
-                    src={productPayment}
-                    alt="payment"
-                    className="w-auto object-cover"
-                  /> */}
-                  <p className="font-semibold">
-                    Guaranteed safe & secure checkout
-                  </p>
-                </div>
               </div>
             </div>
           ) : (
             <div className="flex items-start gap-10">
-              {/* <CategoryFilters id={id} /> */}
+              <CategoryFilters id={id} />
               <div>
                 <p className="text-4xl font-semibold mb-5 text-center">
                   Products Collection
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                  {allProducts?.map((item) => (
-                    <ProductCard item={item} key={item?._id} />
-                  ))}
+                  {allProducts?.length > 0 ? (
+                    allProducts.map((item) => (
+                      <ProductCard item={item} key={item?._id} />
+                    ))
+                  ) : (
+                    <p>No products available</p>
+                  )}
                 </div>
               </div>
             </div>
