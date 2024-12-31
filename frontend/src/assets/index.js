@@ -9,6 +9,7 @@ import brandFive from "./brands/brandFive.png";
 import brandSix from "./brands/brandSix.png";
 import discountImgOne from "./discountImgOne.webp";
 import discountImgTwo from "./discountImgTwo.png";
+import productPayment from "./productPayment.webp";
 
 export {
   logo,
@@ -22,4 +23,5 @@ export {
   brandSix,
   discountImgOne,
   discountImgTwo,
+  productPayment,
 };
