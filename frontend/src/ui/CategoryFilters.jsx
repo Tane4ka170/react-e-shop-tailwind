@@ -50,7 +50,9 @@ const CategoryFilters = () => {
               <Link
                 to={`/category/${item?._base}`}
                 key={item?._id}
-                className={}
+                className={`text-base font-medium text-start underline underline-offset-2 decoration-[1px] decoration-transparent hover:decoration-gray-950 hover:text-black duration-200 ${
+                  item?._base === id ? "text-greenText" : "text-lightText"
+                } `}
               >
                 {item?.name}
               </Link>
