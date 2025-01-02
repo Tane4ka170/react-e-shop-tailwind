@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { config } from "../../config";
 import { getData } from "../lib";
 import { FidgetSpinner } from "react-loader-spinner";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 
 const CategoryFilters = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { id: selectedCategoryId } = useParams(); // Extract the dynamic parameter if needed.
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,6 +25,7 @@ const CategoryFilters = () => {
 
     fetchData();
   }, []);
+
   return (
     <div className="hidden md:inline-flex flex-col gap-6">
       <p className="text-3xl font-bold">Filters</p>
@@ -51,8 +53,10 @@ const CategoryFilters = () => {
                 to={`/category/${item?._base}`}
                 key={item?._id}
                 className={`text-base font-medium text-start underline underline-offset-2 decoration-[1px] decoration-transparent hover:decoration-gray-950 hover:text-black duration-200 ${
-                  item?._base === id ? "text-greenText" : "text-lightText"
-                } `}
+                  item?._base === selectedCategoryId
+                    ? "text-greenText"
+                    : "text-lightText"
+                }`}
               >
                 {item?.name}
               </Link>
