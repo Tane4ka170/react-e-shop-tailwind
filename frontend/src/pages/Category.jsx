@@ -46,10 +46,16 @@ const Category = () => {
           </h2>
           <div className="flex items-start gap-10">
             <CategoryFilters id={id} />
-            <div>
-              {products?.map((item) => (
-                <ProductCard item={item} key={item?._id} />
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+              {products.length > 0 ? (
+                products.map((item) => (
+                  <ProductCard item={item} key={item?._id} />
+                ))
+              ) : (
+                <p className="text-lg font-medium text-center col-span-full">
+                  No products found for this category.
+                </p>
+              )}
             </div>
           </div>
         </Container>
