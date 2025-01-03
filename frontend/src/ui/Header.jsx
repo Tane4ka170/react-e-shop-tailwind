@@ -31,6 +31,8 @@ const bottomNavigation = [
 const Header = () => {
   const [searchText, setSearchText] = useState("");
   const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,6 +50,30 @@ const Header = () => {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/categories`;
+      try {
+        const response = await fetch(endpoint);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.log("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const filtered = products.filter((item) =>
+      item.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  }, [searchText]);
 
   return (
     <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
@@ -74,6 +100,22 @@ const Header = () => {
             <CiSearch className="absolute top-2.5 right-4 text-xl" />
           )}
         </div>
+        {/* SearchProduct will be here */}
+        {searchText && (
+          <div className="absolute left-0 top-20 w-full mx-auto max-h-[500px] px-10 py-5 bg-white z-20 overflow-y-scroll">
+            {filteredProducts.length > 0 ? (
+              <div>products</div>
+            ) : (
+              <div>
+                <p>
+                  No results match your search keywords{" "}
+                  <span>{`(${searchText})`}</span>
+                </p>
+                . Please try again.
+              </div>
+            )}
+          </div>
+        )}
         {/* Menubar */}
         <div className="flex items-center gap-x-6">
           <Link to={"/profile"}>
