@@ -107,7 +107,7 @@ const Header = () => {
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
                 {filteredProducts?.map((item) => (
-                  <ProductCard item={item} />
+                  <ProductCard item={item} setSearchText={setSearchText} />
                 ))}
               </div>
             ) : (
