@@ -13,7 +13,7 @@ import FormattedPrice from "./FormattedPrice";
 import ProductCardSideNav from "./ProductCardSideNav";
 import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ item, title }) => {
+const ProductCard = ({ item, title, setSearchText }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigation = useNavigate();
 
@@ -28,6 +28,7 @@ const ProductCard = ({ item, title }) => {
 
   const handleProduct = () => {
     navigation(`/product/${item?._id}`);
+    setSearchText && setSearchText("");
   };
   return (
     <div className="border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
