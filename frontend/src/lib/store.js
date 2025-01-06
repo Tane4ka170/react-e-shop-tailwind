@@ -41,9 +41,27 @@ export const store = create()(
         }
       },
 
-          addToCart: (product){
-          return new Promise
-      }
+      addToCart: (product) => {
+        return new Promise((resolve) => {
+          set((state) => {
+            const existingProduct = state.cartProduct.find(
+              (p) => p._id === product._id
+            );
+
+            if (existingProduct) {
+              return {
+                cartProduct: state.cartProduct.map((p) =>
+                  p._id === product._id
+                    ? { ...p, quantity: (p.quantity || 0) + 1 }
+                    : p
+                ),
+              };
+            } else {
+              return {};
+            }
+          });
+        });
+      },
     }),
     {
       name: "e-shop-storage",
