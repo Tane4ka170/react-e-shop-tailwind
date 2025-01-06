@@ -59,7 +59,7 @@ const ProductCard = ({ item, title, setSearchText }) => {
           <CiStar />
           <CiStar />
         </div>
-        <AddToCartBtn />
+        <AddToCartBtn product={item} />
       </div>
       <Transition appear show={isOpen}>
         <Dialog
