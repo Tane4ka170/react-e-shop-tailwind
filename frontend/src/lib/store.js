@@ -57,9 +57,15 @@ export const store = create()(
                 ),
               };
             } else {
-              return {};
+              return {
+                cartProduct: [
+                  ...state.cartProduct,
+                  { ...product, quantity: 1 },
+                ],
+              };
             }
           });
+          resolve();
         });
       },
     }),
