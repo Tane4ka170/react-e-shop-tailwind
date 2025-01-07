@@ -68,6 +68,36 @@ export const store = create()(
           resolve();
         });
       },
+
+      decreaseQuantity: (productId) => {
+        set((state) => {
+          const existingProduct = state.cartProduct.find(
+            (p) => p._id === productId
+          );
+
+          if (existingProduct) {
+            return {
+              cartProduct: state.cartProduct.map((p) =>
+                p._id === productId
+                  ? { ...p, quantity: Math.max(p.quantity - 1, 1) }
+                  : p
+              ),
+            };
+          } else {
+            return state;
+          }
+        });
+      },
+      removeFromCart: (productId) => {
+        set((state) => ({
+          cartProduct: state.cartProduct.filter(
+            (item) => item._id !== productId
+          ),
+        }));
+      },
+      resetCart: () => {
+        set({ cartProduct: [] });
+      },
     }),
     {
       name: "e-shop-storage",
