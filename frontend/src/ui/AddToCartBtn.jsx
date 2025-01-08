@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 const AddToCartBtn = ({ className, title, product }) => {
-  const { addToCart, cartProduct } = store();
+  const { addToCart, cartProduct, decreaseQuantity } = store();
 
   const [existingProduct, setExistingProduct] = useState(null);
 
@@ -23,7 +23,19 @@ const AddToCartBtn = ({ className, title, product }) => {
     }
   };
 
-  const handleDeleteProduct = () => {};
+  const handleDeleteProduct = () => {
+    if (existingProduct) {
+      if (existingProduct?.quantity > 1) {
+        decreaseQuantity(existingProduct._id);
+        toast.success(
+          `${product?.name.substring(0, 10)} decreased successfully`
+        );
+      } else {
+        toast.error("You cannot reduce the quantity below 1");
+      }
+    } else {
+    }
+  };
 
   useEffect(() => {
     const availableItem = cartProduct.find(
