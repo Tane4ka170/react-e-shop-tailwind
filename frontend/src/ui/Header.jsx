@@ -19,6 +19,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import ProductCard from "./ProductCard";
+import { store } from "../lib/store";
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
@@ -34,6 +35,7 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const { addToCart, cartProduct, decreaseQuantity } = store();
 
   useEffect(() => {
     const fetchData = async () => {
