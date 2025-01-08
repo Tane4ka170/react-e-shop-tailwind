@@ -35,7 +35,7 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const { addToCart, cartProduct, decreaseQuantity } = store();
+  const { cartProduct } = store();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -143,7 +143,7 @@ const Header = () => {
           <Link to={"/cart"} className="relative block">
             <CiShoppingBasket className="hover:text-skyText duration-200 cursor-pointer" />
             <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
-              0
+              {cartProduct?.length > 0 ? cartProduct?.length : "0"}
             </span>
           </Link>
         </div>
