@@ -3,8 +3,19 @@ import { Link } from "react-router";
 import FormattedPrice from "./FormattedPrice";
 import AddToCartBtn from "./AddToCartBtn";
 import { IoIosClose } from "react-icons/io";
+import { store } from "../lib/store";
+import toast from "react-hot-toast";
+import { FaCheck } from "react-icons/fa";
 
 const CartProduct = ({ product }) => {
+  const { removeFromCart } = store();
+  const handleRemoveProduct = () => {
+    if (product) {
+      removeFromCart(product?._id);
+      toast.success(`${product?.name.substring(0, 20)} deleted successfully!`);
+    }
+  };
+
   return (
     <div className="flex py-6 sm:py-10">
       <Link to={`/product/${product?._id}`}>
@@ -35,14 +46,34 @@ const CartProduct = ({ product }) => {
               </p>
             </div>
           </div>
-          <div>
-            <div>
-              <button>
-                <IoIosClose />
+          <div className="mt-4 sm:mt-0 sm:pr-9">
+            <div className="absolute">
+              <button
+                onClick={handleRemoveProduct}
+                className="-m-2 inline-flex p-2 text-gray-600 hover:text-red-600"
+              >
+                <IoIosClose className="text-xl" />
               </button>
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        {product?.isInStock && (
+          <p className="mt-4 flex space-x-2 text-sm text-gray-700">
+            <FaCheck className="text-lg text-green-700" />{" "}
+            <span>Available and ships within 3-4 weeks</span>
+          </p>
+        )}
+        <p>
+          Save{" "}
+          <span className="text-sm font-semibold text-green-500">
+            <FormattedPrice
+              amount={product?.regularPrice - product?.salePrice}
+            />
+          </span>{" "}
+          on your purchase
+        </p>
       </div>
     </div>
   );
