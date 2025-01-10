@@ -29,9 +29,11 @@ const Cart = () => {
           </div>
         </>
       ) : (
-        <div>
-          <h1>Shopping Cart</h1>
-          <p>
+        <div className="bg-white h-96 flex flex-col gap-2 items-center justify-center py-5 rounded-lg border border-gray-200 drop-shadow-2xl">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Shopping Cart
+          </h1>
+          <p className="text-lg max-w-[600px] text-center text-gray-600">
             Your cart is empty. Start adding items to fill it up and proceed to
             checkout!
           </p>
