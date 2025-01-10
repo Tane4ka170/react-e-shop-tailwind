@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { store } from "../lib/store";
 import Container from "../ui/Container";
 import { Link } from "react-router";
 import CartProduct from "../ui/CartProduct";
+import FormattedPrice from "../ui/FormattedPrice";
+import { CiCircleQuestion } from "react-icons/ci";
+import CheckoutBtn from "../ui/CheckoutBtn";
 
 const Cart = () => {
   const { cartProduct } = store();
+  const [totalAmount, setTotalAmount] = useState({ regular: 0, discounted: 0 });
+
+  const shippingAmt = 25;
+  const taxAmt = 15;
+
+  useEffect(() => {
+    const totals = cartProduct.reduce(
+      (sum, product) => {
+        sum.regular += product?.regularPrice * product?.quantity;
+        sum.discounted += product?.discountedPrice * product?.quantity;
+        return sum;
+      },
+      { regular: 0, discounted: 0 }
+    );
+    setTotalAmount(totals);
+  }, [cartProduct]);
+
   return (
     <Container>
       {cartProduct.length > 0 ? (
@@ -25,6 +45,61 @@ const Cart = () => {
               <h2 className="text-lg font-medium text-gray-900">
                 Summary of Your Order
               </h2>
+              <dl className="mt-6 space-y-4">
+                <div className="flex items-center justify-between">
+                  <dt className="text-sm text-gray-600">Subtotal</dt>
+                  <dd className="text-sm font-medium text-gray-900">
+                    <FormattedPrice amount={totalAmount?.regular} />
+                  </dd>
+                </div>
+                <div className="flex items-center justify-between border-t border-gray-200 pt-4">
+                  <dt className="flex items-center text-sm text-gray-600">
+                    <span>Shipping estimate</span>
+
+                    <CiCircleQuestion
+                      className="h-5 w-5 text-gray-400 ml-2"
+                      aria-hidden="true"
+                    />
+                  </dt>
+                  <dd className="text-sm font-medium text-gray-900">
+                    <FormattedPrice amount={shippingAmt} />
+                  </dd>
+                </div>
+                <div className="flex items-center justify-between border-t border-gray-200 pt-4">
+                  <dt className="flex text-sm text-gray-600">
+                    <span>Tax estimate</span>
+
+                    <CiCircleQuestion
+                      className="h-5 w-5 text-gray-400 ml-2"
+                      aria-hidden="true"
+                    />
+                  </dt>
+                  <dd className="text-sm font-medium text-gray-900">
+                    <FormattedPrice amount={taxAmt} />
+                  </dd>
+                </div>
+                <div className="flex items-center justify-between border-t border-gray-200 pt-4">
+                  <dt className="text-base font-medium text-gray-900">
+                    Total Discount
+                  </dt>
+                  <dd className="text-base font-medium text-gray-500">
+                    <FormattedPrice
+                      amount={totalAmount?.regular - totalAmount?.discounted}
+                    />
+                  </dd>
+                </div>
+                <div className="flex items-center justify-between border-t border-gray-200 pt-4">
+                  <dt className="text-base font-medium text-gray-900">
+                    Order total
+                  </dt>
+                  <dd className="text-lg font-bold text-gray-900">
+                    <FormattedPrice
+                      amount={totalAmount?.discounted + shippingAmt + taxAmt}
+                    />
+                  </dd>
+                </div>
+              </dl>
+              <CheckoutBtn products={cartProduct} />
             </section>
           </div>
         </>
@@ -33,11 +108,16 @@ const Cart = () => {
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Shopping Cart
           </h1>
-          <p className="text-lg max-w-[600px] text-center text-gray-600">
+          <p className="text-lg max-w-[600px] text-center text-gray-600 tracking-wide leading-6">
             Your cart is empty. Start adding items to fill it up and proceed to
             checkout!
           </p>
-          <Link to={"/product"}>Proceed to shopping</Link>
+          <Link
+            to={"/product"}
+            className="bg-gray-800 text-gray-200 px-8 py-4 rounded-md hover:bg-black hover:text-white duration-200 uppercase text-sm font-semibold tracking-wide"
+          >
+            Proceed to shopping
+          </Link>
         </div>
       )}
     </Container>
