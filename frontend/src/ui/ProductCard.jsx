@@ -45,7 +45,7 @@ const ProductCard = ({ item, title, setSearchText }) => {
           className="w-full h-full rounded-md object-cover group-hover:scale-110"
           onClick={handleProduct}
         />
-        <ProductCardSideNav />
+        <ProductCardSideNav product={item} />
       </div>
       <div className="flex flex-col gap-2 pb-2">
         <h3 className="text-xs uppercase font-semibold text-lightText">
