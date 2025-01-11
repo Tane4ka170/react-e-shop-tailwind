@@ -98,6 +98,23 @@ export const store = create()(
       resetCart: () => {
         set({ cartProduct: [] });
       },
+      addToFavorite: (product) => {
+        return new Promise((resolve) => {
+          set((state) => {
+            const isFavorite = state.favoriteProduct.filter(
+              (item) => item._id === product._id
+            );
+            return {
+              favoriteProduct: isFavorite
+                ? state.favoriteProduct.filter(
+                    (item) => item._id !== product._id
+                  )
+                : [...state.favoriteProduct, { ...product }],
+            };
+          });
+          resolve();
+        });
+      },
     }),
     {
       name: "e-shop-storage",
