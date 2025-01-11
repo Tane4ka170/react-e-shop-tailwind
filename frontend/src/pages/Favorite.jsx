@@ -1,7 +1,8 @@
 import React from "react";
+import Container from "../ui/Container";
 
 const Favorite = () => {
-  return <div>Favorite</div>;
+  return <Container>Favorite</Container>;
 };
 
 export default Favorite;
