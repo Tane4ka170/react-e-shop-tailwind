@@ -101,7 +101,7 @@ export const store = create()(
       addToFavorite: (product) => {
         return new Promise((resolve) => {
           set((state) => {
-            const isFavorite = state.favoriteProduct.filter(
+            const isFavorite = state.favoriteProduct.some(
               (item) => item._id === product._id
             );
             return {
@@ -114,6 +114,16 @@ export const store = create()(
           });
           resolve();
         });
+      },
+      removeFromFavorite: (productId) => {
+        set((state) => ({
+          favoriteProduct: state.favoriteProduct.filter(
+            (item) => item._id !== productId
+          ),
+        }));
+      },
+      resetFavorite: () => {
+        set({ favoriteProduct: [] });
       },
     }),
     {
