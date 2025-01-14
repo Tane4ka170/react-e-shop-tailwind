@@ -4,7 +4,7 @@ import { store } from "../lib/store";
 import toast from "react-hot-toast";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
-const AddToCartBtn = ({ className, title, product }) => {
+const AddToCartBtn = ({ className, title, product, showPrice = true }) => {
   const { addToCart, cartProduct, decreaseQuantity } = store();
 
   const [existingProduct, setExistingProduct] = useState(null);
