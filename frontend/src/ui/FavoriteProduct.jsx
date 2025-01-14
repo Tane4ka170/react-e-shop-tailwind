@@ -1,6 +1,13 @@
 import React from "react";
+import toast from "react-hot-toast";
+import { IoIosClose } from "react-icons/io";
+import { store } from "../lib/store";
+import { useNavigate } from "react-router";
+import AddToCartBtn from "./AddToCartBtn";
 
 const FavoriteProduct = ({ product }) => {
+  const { removeFromFavorite } = store();
+  const navigate = useNavigate();
   return (
     <div className="flex py-6">
       <div className="min-w-0 flex-1 lg:flex lg:flex-col">
@@ -14,7 +21,23 @@ const FavoriteProduct = ({ product }) => {
               <p className="text-sm mt-1">
                 Brand: <span className="font-medium">{product?.brand}</span>
               </p>
+              <p className="text-sm mt-1">
+                Category:{" "}
+                <span className="font-medium">{product?.category}</span>
+              </p>
             </div>
+            <span
+              className="text-lg text-gray-600 hover:text-red-600 duration-200 cursor-pointer inline-block mt-4 sm:mt-0"
+              onClick={() => {
+                removeFromFavorite(product?._id);
+                toast.success("Successfully removed from favorites!");
+              }}
+            >
+              <IoIosClose />
+            </span>
+          </div>
+          <div className="flex text-sm items-center gap-6 font-medium py-4">
+            <AddToCartBtn product={product} className="w-32" />
           </div>
         </div>
       </div>
