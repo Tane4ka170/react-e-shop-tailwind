@@ -42,7 +42,7 @@ const CartProduct = ({ product }) => {
                 <FormattedPrice
                   amount={product?.discountedPrice * product?.quantity}
                 />
-                <AddToCartBtn product={product} />
+                <AddToCartBtn product={product} showPrice={false} />
               </p>
             </div>
           </div>
