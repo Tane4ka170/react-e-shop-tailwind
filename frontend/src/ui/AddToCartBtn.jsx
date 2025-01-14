@@ -37,6 +37,26 @@ const AddToCartBtn = ({ className, title, product, showPrice = true }) => {
     }
   };
 
+  const getRegularPrice = () => {
+    if (existingProduct) {
+      if (product) {
+        return product?.regularPrice * existingProduct?.quantity;
+      }
+    } else {
+      return product?.regularPrice;
+    }
+  };
+
+  const getDiscountedPrice = () => {
+    if (existingProduct) {
+      if (product) {
+        return product?.discountedPrice * product?.quantity;
+      }
+    } else {
+      return product?.discountedPrice;
+    }
+  };
+
   useEffect(() => {
     const availableItem = cartProduct.find(
       (item) => item?._id === product?._id
@@ -47,6 +67,14 @@ const AddToCartBtn = ({ className, title, product, showPrice = true }) => {
 
   return (
     <>
+      {showPrice && (
+        <div>
+          <PriceTag
+            regularPrice={getRegularPrice()}
+            discountedPrice={getDiscountedPrice()}
+          />
+        </div>
+      )}
       {existingProduct ? (
         <div className="flex self-center items-center justify-center gap-2">
           <button
