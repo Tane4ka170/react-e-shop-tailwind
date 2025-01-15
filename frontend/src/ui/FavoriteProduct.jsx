@@ -51,7 +51,10 @@ const FavoriteProduct = ({ product }) => {
           upon purchase
         </p>
       </div>
-      <div className="ml-4 flex-shrink-0 h-20 w-20 sm:w-40 sm:h-40 sm:order-first sm:m-0 sm:mr-6 border border-gray-200 rounded-md hover:border-skyText duration-200 cursor-pointer group overflow-hidden" onClick={()=>{navigate(`/product/${product?._id}`)}}>
+      <div
+        className="ml-4 flex-shrink-0 h-20 w-20 sm:w-40 sm:h-40 sm:order-first sm:m-0 sm:mr-6 border border-gray-200 rounded-md hover:border-skyText duration-200 cursor-pointer group overflow-hidden"
+        onClick={() => navigate(`/product/${product?._id}`)}
+      >
         <img
           src={product?.images[0]}
           alt="productImage"
