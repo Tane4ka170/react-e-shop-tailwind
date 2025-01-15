@@ -4,6 +4,7 @@ import { IoIosClose } from "react-icons/io";
 import { store } from "../lib/store";
 import { useNavigate } from "react-router";
 import AddToCartBtn from "./AddToCartBtn";
+import FormattedPrice from "./FormattedPrice";
 
 const FavoriteProduct = ({ product }) => {
   const { removeFromFavorite } = store();
@@ -40,9 +41,17 @@ const FavoriteProduct = ({ product }) => {
             <AddToCartBtn product={product} className="w-32" />
           </div>
         </div>
-        <span></span>
+        <p>
+          You are saving{" "}
+          <span className="text-sm font-semibold text-green-500">
+            <FormattedPrice
+              amount={product?.regularPrice - product?.discountedPrice}
+            />
+          </span>{" "}
+          upon purchase
+        </p>
       </div>
-      <div className="ml-4 flex-shrink-0 h-20 w-20 sm:w-40 sm:h-40 sm:order-first sm:m-0 sm:mr-6 border border-gray-200 rounded-md hover:border-skyText duration-200 cursor-pointer group overflow-hidden">
+      <div className="ml-4 flex-shrink-0 h-20 w-20 sm:w-40 sm:h-40 sm:order-first sm:m-0 sm:mr-6 border border-gray-200 rounded-md hover:border-skyText duration-200 cursor-pointer group overflow-hidden" onClick={()=>{navigate(`/product/${product?._id}`)}}>
         <img
           src={product?.images[0]}
           alt="productImage"
