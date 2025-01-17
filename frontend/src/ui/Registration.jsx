@@ -4,14 +4,24 @@ import Label from "./Label";
 import { MdAddAPhoto } from "react-icons/md";
 
 const Registration = () => {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errMsg, setErrMsg] = useState("");
+  const [avatar, setAvatar] = useState({ file: null, url: "" });
+
+  const handleRegistration = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
-      {!login ? (
+      {login ? (
         <Login />
       ) : (
         <div className="bg-gray-950 rounded-lg">
-          <form className="max-w-5xl mx-auto pt-10 px-10 lg:px-0 text-white">
+          <form
+            className="max-w-5xl mx-auto pt-10 px-10 lg:px-0 text-white"
+            onSubmit={handleRegistration}
+          >
             <div className="border-b border-b-white/10 pb-5">
               <h2 className="text-lg font-semibold uppercase leading-7">
                 Registration Form
@@ -61,10 +71,28 @@ const Registration = () => {
                     <div className="flex-1">
                       <Label title="Cover photo" />
                       <div className="mt-2 flex justify-center rounded-lg border  border-dashed border-white/25 px-6 py-4">
-                        <div>
-                          <div>
-                            <MdAddAPhoto />
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-14 h-14 border border-gray-600 rounded-full p-1">
+                            <MdAddAPhoto className="mx-auto h-full w-full text-gray-500" />
                           </div>
+
+                          <div className="mt-4 flex items-center mb-1 text-sm leading-6">
+                            <label htmlFor="file-upload">
+                              <span className="relative cursor-pointer rounded-md px-2 py-1 bg-gray-900 font-semibold text-gray-200 hover:bg-gray-800">
+                                Upload a file
+                              </span>
+                              <input
+                                type="file"
+                                name="file-upload"
+                                id="file-upload"
+                                className="sr-only"
+                              />
+                            </label>
+                            <p className="pl-1">or simply drag and drop it</p>
+                          </div>
+                          <p className="text-xs leading-5 text-gray-400">
+                            PNG, JPG, GIF up to 10MB
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -72,7 +100,25 @@ const Registration = () => {
                 </div>
               </div>
             </div>
+            <p className="bg-white/90 text-red-600 text-center py-1 rounded-md tracking-wide font-semibold">
+              {"error"}
+            </p>
+            <button
+              type="submit"
+              className="mt-5 bg-indigo-700 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200"
+            >
+              Send
+            </button>
           </form>
+          <p className="text-sm leading-6 text-gray-400 text-center -mt-2 py-10">
+            Already have an account{" "}
+            <button
+              onClick={() => setLogin(true)}
+              className="text-gray-200 font-semibold underline underline-offset-2 decoration-[1px] hover:text-white duration-200"
+            >
+              Login
+            </button>
+          </p>
         </div>
       )}
     </div>
