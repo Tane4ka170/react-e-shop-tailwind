@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Login from "./Login";
 import Label from "./Label";
 import { MdAddAPhoto } from "react-icons/md";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, db } from "../lib/firebase";
+import upload from "../lib/upload";
+import { doc, setDoc } from "firebase/firestore";
 
 const Registration = () => {
   const [login, setLogin] = useState(false);
@@ -9,8 +13,47 @@ const Registration = () => {
   const [errMsg, setErrMsg] = useState("");
   const [avatar, setAvatar] = useState({ file: null, url: "" });
 
-  const handleRegistration = (e) => {
+  const handleRegistration = async (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const { firstName, lastName, email, password } =
+      Object.fromEntries(formData);
+
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      let imageUrl = null;
+      if (avatar & avatar?.file) {
+        imageUrl = await upload;
+      }
+    } catch (error) {
+      let errorMessage;
+      switch (error.code) {
+        case "auth/invalid-email":
+          errorMessage = "Please enter a valid email.";
+          break;
+        case "auth/missing-password":
+          errorMessage = "Please enter a password.";
+          break;
+        case "auth/email-already-in-use":
+          errorMessage = "This email is already in use. Try another email.";
+          break;
+        default:
+          errorMessage = "An error occurred. Please try again.";
+      }
+      console.log("Error", error);
+      setErrMsg(errorMessage);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAvatar = (e) => {
+    if (e.target.files[0]) {
+      setAvatar({
+        file: e.target.files[0],
+        url: URL.createObjectURL(e.target.files[0]),
+      });
+    }
   };
   return (
     <div>
@@ -73,7 +116,15 @@ const Registration = () => {
                       <div className="mt-2 flex justify-center rounded-lg border  border-dashed border-white/25 px-6 py-4">
                         <div className="flex flex-col items-center text-center">
                           <div className="w-14 h-14 border border-gray-600 rounded-full p-1">
-                            <MdAddAPhoto className="mx-auto h-full w-full text-gray-500" />
+                            {avatar?.url ? (
+                              <img
+                                src={avatar?.url}
+                                alt="userImage"
+                                className="w-full h-full rounded-full object-cover"
+                              />
+                            ) : (
+                              <MdAddAPhoto className="mx-auto h-full w-full text-gray-500" />
+                            )}
                           </div>
 
                           <div className="mt-4 flex items-center mb-1 text-sm leading-6">
@@ -86,6 +137,7 @@ const Registration = () => {
                                 name="file-upload"
                                 id="file-upload"
                                 className="sr-only"
+                                onChange={handleAvatar}
                               />
                             </label>
                             <p className="pl-1">or simply drag and drop it</p>
