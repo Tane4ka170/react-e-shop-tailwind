@@ -1,11 +1,42 @@
 import React from "react";
 import Label from "./Label";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../lib/firebase";
 
 const Login = ({ setLogin }) => {
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
 
-  const handleLogin = () => {};
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData(e.target);
+      const { email, password } = Object.fromEntries(formData);
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      let errorMessage;
+      switch (error.code) {
+        case "auth/user-not-found":
+          errorMessage = "No user found with this email.";
+          break;
+        case "auth/wrong-password":
+          errorMessage = "Incorrect password.";
+          break;
+        case "auth/invalid-email":
+          errorMessage = "Invalid email address.";
+          break;
+        case "auth/invalid-credential":
+          errorMessage = "Email or Password not matched";
+          break;
+        default:
+          errorMessage = "An error occurred. Please try again.";
+      }
+      console.log("Error", error);
+      setErrMsg(errorMessage);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="bg-gray-950 rounded-lg">
       <form
@@ -14,10 +45,10 @@ const Login = ({ setLogin }) => {
       >
         <div className="border-b border-b-white/10 pb-5">
           <h2 className="text-lg font-semibold uppercase leading-7">
-            Registration Form
+            Sign-In Form
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            You must provide the necessary information to register with us
+            Enter your credentials to access your account
           </p>
         </div>
 
@@ -49,7 +80,7 @@ const Login = ({ setLogin }) => {
 
         <button
           type="submit"
-          disabled={loading}
+          // disabled={loading}
           className="mt-5 bg-indigo-700 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200"
         >
           {loading ? "Loading..." : "Send"}
