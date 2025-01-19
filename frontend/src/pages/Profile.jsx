@@ -22,7 +22,7 @@ const Profile = () => {
 
   return (
     <Container>
-      {currentUser ? <UserInfo /> : <Registration />}
+      {currentUser ? <UserInfo currentUser={currentUser} /> : <Registration />}
       {isLoading && <Loading />}
     </Container>
   );
