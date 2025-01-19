@@ -20,11 +20,20 @@ const Registration = () => {
       Object.fromEntries(formData);
 
     try {
+      setLoading(true);
       const res = await createUserWithEmailAndPassword(auth, email, password);
       let imageUrl = null;
       if (avatar & avatar?.file) {
-        imageUrl = await upload;
+        imageUrl = await upload(avatar?.file);
       }
+      await setDoc(doc(db, "users", res.user.uid), {
+        firstName,
+        lastName,
+        email,
+        avatar: imageUrl,
+        id: res.user.uid,
+      });
+      setLogin(true);
     } catch (error) {
       let errorMessage;
       switch (error.code) {
@@ -58,7 +67,7 @@ const Registration = () => {
   return (
     <div>
       {login ? (
-        <Login />
+        <Login setLogin={setLogin} />
       ) : (
         <div className="bg-gray-950 rounded-lg">
           <form
@@ -84,7 +93,7 @@ const Registration = () => {
                     className="block w-full rounded-md border-0 bg-white/5 py-1.5 px-4 outline-none text-white shadow-sm ring-1 ring-inet ring-white/10 focus:ring-skyText sm:text-sm sm:leading-6 mt-2"
                   />
                 </div>
-                <div className="sm:col-span-3">
+                <div className="sm:col-span-4">
                   <Label title="Last name" htmlFor="lastName" />
                   <input
                     type="text"
@@ -100,7 +109,7 @@ const Registration = () => {
                     className="block w-full rounded-md border-0 bg-white/5 py-1.5 px-4 outline-none text-white shadow-sm ring-1 ring-inet ring-white/10 focus:ring-skyText sm:text-sm sm:leading-6 mt-2"
                   />
                 </div>
-                <div className="sm:col-span-5">
+                <div className="sm:col-span-4">
                   <Label title="Password" htmlFor="password" />
                   <input
                     type="password"
@@ -152,14 +161,18 @@ const Registration = () => {
                 </div>
               </div>
             </div>
-            <p className="bg-white/90 text-red-600 text-center py-1 rounded-md tracking-wide font-semibold">
-              {"error"}
-            </p>
+            {errMsg && (
+              <p className="bg-white/90 text-red-600 text-center py-1 rounded-md tracking-wide font-semibold">
+                {errMsg}
+              </p>
+            )}
+
             <button
+              disabled={loading}
               type="submit"
               className="mt-5 bg-indigo-700 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200"
             >
-              Send
+              {loading ? "Loading..." : "Send"}
             </button>
           </form>
           <p className="text-sm leading-6 text-gray-400 text-center -mt-2 py-10">
