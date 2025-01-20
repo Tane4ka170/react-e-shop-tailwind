@@ -10,6 +10,7 @@ const Login = ({ setLogin }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true)
       const formData = new FormData(e.target);
       const { email, password } = Object.fromEntries(formData);
       await signInWithEmailAndPassword(auth, email, password);
@@ -96,6 +97,8 @@ const Login = ({ setLogin }) => {
           Register
         </button>
       </p>
+
+      {loading && <Loading/>}
     </div>
   );
 };
