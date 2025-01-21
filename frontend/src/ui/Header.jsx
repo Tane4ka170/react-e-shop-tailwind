@@ -35,7 +35,7 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const { cartProduct, favoriteProduct } = store();
+  const { cartProduct, favoriteProduct, currentUser } = store();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -130,7 +130,15 @@ const Header = () => {
         {/* Menubar */}
         <div className="flex items-center gap-x-6">
           <Link to={"/profile"}>
-            <CiUser className="hover:text-skyText duration-200 cursor-pointer" />
+            {currentUser ? (
+              <img
+                src={currentUser?.avatar}
+                alt="profileImg"
+                className="w-5 h-5 rounded-full object-cover"
+              />
+            ) : (
+              <CiUser className="hover:text-skyText duration-200 cursor-pointer" />
+            )}
           </Link>
 
           <Link to={"/favorite"} className="relative block">
