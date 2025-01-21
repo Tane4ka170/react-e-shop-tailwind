@@ -2,6 +2,7 @@ import React from "react";
 import Label from "./Label";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../lib/firebase";
+import Loading from './Loading'
 
 const Login = ({ setLogin }) => {
   const [loading, setLoading] = useState(false);
