@@ -21,6 +21,12 @@ const CheckoutBtn = ({ products }) => {
       }),
     });
     const checkoutSession = await response.json();
+    const result = await stripe?.redirectToCheckout({
+      sessionId: checkoutSession.id,
+    });
+    if (result.error) {
+      window.alert(result?.error?.message);
+    }
   };
   return (
     <div className="mt-6">
