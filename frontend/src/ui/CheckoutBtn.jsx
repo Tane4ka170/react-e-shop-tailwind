@@ -1,10 +1,27 @@
 import React from "react";
 import { store } from "../lib/store";
+import { loadStripe } from "@stripe/stripe-js";
+import { config } from "../../config";
 
 const CheckoutBtn = ({ products }) => {
   const { currentUser } = store();
+  const publishableKey = process.env.PUBLISHABLE_KEY;
+  const stripePromise = loadStripe(publishableKey);
 
-  const handleCheckout = () => {};
+  const handleCheckout = async () => {
+    const stripe = await stripePromise;
+    const response = fetch(`${config?.baseUrl}/checkout`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        items: products,
+        email: currentUser?.email,
+      }),
+    });
+    const checkoutSession = await response.json();
+  };
   return (
     <div className="mt-6">
       {currentUser ? (
