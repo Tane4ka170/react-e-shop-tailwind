@@ -5,7 +5,7 @@ const router = Router();
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
 router.post("/checkout", async (req, res) => {
-  const stripeKey = new Stripe(stripeSecretKey, {});
+  const stripe = new Stripe(stripeSecretKey, {});
   try {
     const { items, email } = await req.body;
     const extractingItems = await items.map((item) => {
@@ -20,7 +20,23 @@ router.post("/checkout", async (req, res) => {
         }
       }
     });
-    const session = await stripe.checkout.sessions.create();
+    const session = await stripe.checkout.sessions.create({
+      payment_method_type: ["card"],
+      line_items: extractingItems,
+      mode: "payment",
+      success_url:
+        "http://localhost:5173/success?session_id:{CHECKOUT_SESSION_ID}",
+      cancel_url: "http://localhost:5173/cancel",
+      metadata: {
+        email,
+      },
+    });
+
+    res.json({
+      message: "Server is connected",
+      success: true,
+      id: session.id,
+    });
   } catch (error) {
     res.status(500).json({ error });
   }
