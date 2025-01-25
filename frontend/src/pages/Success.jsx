@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { store } from "../lib/store";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import toast from "react-hot-toast";
 import Container from "../ui/Container";
+import Loading from "../ui/Loading";
 
 const Success = () => {
   const { currentUser, cartProduct, resetCart } = store();
@@ -58,7 +59,34 @@ const Success = () => {
     }
   }, [sessionId, navigate, currentUser, cartProduct]);
 
-  return <Container>{loading}</Container>;
+  return (
+    <Container>
+      {loading && <Loading />}
+      <div className="min-h-[400px] flex flex-col items-center justify-center gap-y-5">
+        <h2 className="text-2xl md:text-4xl font-bold text-center">
+          {loading
+            ? "Your payment for the order is currently being processed"
+            : "Your payment has been successfully received by lastKiss.com"}
+        </h2>
+        <p>
+          {loading ? "Processing your request" : "Success!"} You can now view
+          your orders or continue shopping with us.
+        </p>
+        <div className="flex items-center gap-x-5">
+          <Link to={"/orders"}>
+            <button className="bg-black text-slate-100 w-52 h-12 rounded-full text-base font-semibold hover:bg-primeColor duration-300">
+              View Orders
+            </button>
+          </Link>
+          <Link to={"/"}>
+            <button className="bg-black text-slate-100 w-52 h-12 rounded-full text-base font-semibold hover:bg-primeColor duration-300">
+              Continue Shopping
+            </button>
+          </Link>
+        </div>
+      </div>
+    </Container>
+  );
 };
 
 export default Success;
